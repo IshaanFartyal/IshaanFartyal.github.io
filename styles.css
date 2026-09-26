@@ -8,7 +8,7 @@
   --border: #26313a;
   --border-soft: rgba(114, 136, 157, 0.22);
   --accent: #66a3ff;
-  --max-width: 1480px;
+  --max-width: 1360px;
 }
 
 * { box-sizing: border-box; }
@@ -133,7 +133,7 @@ h1 {
   font-size: clamp(3rem, 6vw, 6.5rem);
   line-height: .95;
   letter-spacing: .04em;
-  margin: 24px 0 16px;
+  margin: 20px 0 14px;
   font-weight: 500;
 }
 .kicker {
@@ -348,7 +348,7 @@ h1 {
   .topbar { grid-template-columns: 1fr auto; padding: 0 16px; }
   .topbar .btn { display: none; }
   .hero { min-height: auto; }
-  .hero-copy { padding: 56px 0; }
+  .hero-copy { padding: 48px 0; }
   h1 { font-size: 3.4rem; }
   .hero-actions { gap: 14px; }
   .profile-grid { grid-template-columns: 1fr; }
@@ -485,7 +485,7 @@ h1 {
   font-size: clamp(3rem, 5vw, 5.5rem);
   line-height: .98;
   letter-spacing: -0.03em;
-  margin: 16px 0 22px;
+  margin: 14px 0 18px;
   font-weight: 500;
 }
 
