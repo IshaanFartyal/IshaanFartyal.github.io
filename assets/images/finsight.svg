@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560">
+  <rect width="1000" height="560" fill="#0a0f14"/>
+  <g fill="none" stroke="#6e91b7" stroke-width="3">
+    <polyline points="90,410 220,340 330,370 450,250 560,290 690,175 830,220 915,145"/>
+    <line x1="90" y1="445" x2="915" y2="445" stroke="#2e3943"/>
+    <line x1="90" y1="120" x2="90" y2="445" stroke="#2e3943"/>
+  </g>
+  <text x="60" y="80" fill="#e7edf3" font-family="Arial" font-size="42">FINSIGHT</text>
+  <text x="60" y="125" fill="#718191" font-family="monospace" font-size="18">PYTHON • STREAMLIT • PERSONAL FINANCE ANALYTICS</text>
+</svg>

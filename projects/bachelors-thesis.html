@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Bachelor's Thesis — Determination of a Transition Plane in a Gas Atomization Simulation by Ishaan Fartyal."
+  />
+  <title>Bachelor's Thesis — Ishaan Fartyal</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+
+<body>
+  <div class="site-grid" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="../index.html">IF</a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="../index.html#profile">Profile</a>
+      <a href="../index.html#capabilities">Capabilities</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#work">Selected Work</a>
+      <a href="../index.html#toolkit">Toolkit</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+
+    <a
+      class="btn btn-ghost"
+      href="../assets/documents/CV_Ishaan_Fartyal.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View CV ↗
+    </a>
+  </header>
+
+  <main class="project-page section-shell">
+
+    <a class="project-back" href="../index.html#work">
+      ← Back to selected work
+    </a>
+
+    <section class="project-hero">
+
+      <div class="project-hero-copy">
+        <div class="eyebrow">
+          Thermo-Fluids · CFD · Gas Atomization
+        </div>
+
+        <h1>Determination of a Transition Plane in Gas Atomization</h1>
+
+        <p class="project-summary">
+          Investigating how droplet properties evolve downstream in a gas
+          atomization simulation to determine a transition plane that balances
+          physical reliability with computational efficiency.
+        </p>
+
+        <div class="project-meta">
+          <span>OpenFOAM</span>
+          <span>CFD</span>
+          <span>VOF</span>
+          <span>Data Analysis</span>
+          <span>Thermo-Fluids</span>
+        </div>
+      </div>
+
+      <div class="project-hero-visual">
+        <span class="visual-label">
+          Bachelor Final Project / Power & Flow
+        </span>
+
+        <div class="project-stat">
+          <span class="stat-value">20</span>
+          <span class="stat-label">mm recommended transition plane</span>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="star-grid">
+
+      <article class="star-card">
+        <div class="star-label">
+          <span>01</span>
+          Situation
+        </div>
+
+        <h2>Coupling two atomization models</h2>
+
+        <p>
+          In gas atomization, the primary breakup phase can be resolved using a
+          Volume-of-Fluid model, while the secondary breakup phase can be treated
+          using Lagrangian particle tracking. A transition plane is therefore
+          required to transfer droplet data between the two numerical models.
+        </p>
+      </article>
+
+      <article class="star-card">
+        <div class="star-label">
+          <span>02</span>
+          Task
+        </div>
+
+        <h2>Find the earliest reliable transition location</h2>
+
+        <p>
+          The objective was to determine where droplets had become sufficiently
+          developed for transfer to the secondary-breakup model, while keeping
+          the primary-breakup simulation domain as short as possible to avoid
+          unnecessary computational cost.
+        </p>
+      </article>
+
+      <article class="star-card">
+        <div class="star-label">
+          <span>03</span>
+          Action
+        </div>
+
+        <h2>Analyse droplet evolution across two CFD cases</h2>
+
+        <p>
+          I analysed OpenFOAM VOF-cloud data from two gas-atomization cases with
+          different materials, gases, nozzle geometries and initial conditions.
+        </p>
+
+        <ul>
+          <li>Grouped droplet data into 1 mm axial-distance bins.</li>
+          <li>Used medians and interquartile ranges to reduce sensitivity to noisy data.</li>
+          <li>Evaluated droplet diameter, axial velocity and temperature versus downstream distance.</li>
+          <li>Investigated multiple sphericity criteria and Weber number.</li>
+          <li>Used breakup length as a lower-bound constraint for the transition location.</li>
+          <li>Compared trends across both simulation cases before forming a recommendation.</li>
+        </ul>
+      </article>
+
+      <article class="star-card result-card">
+        <div class="star-label">
+          <span>04</span>
+          Result
+        </div>
+
+        <h2>Recommend a 20 mm transition plane</h2>
+
+        <p>
+          The analysis supported a transition plane 20 mm downstream from the
+          nozzle for the studied cases. The broader selection rule was to use the
+          earliest location where droplet diameter and temperature trend downward,
+          axial velocity trends upward, and breakup length is satisfied as a lower bound.
+        </p>
+
+        <div class="result-highlight">
+          <span class="result-title">Engineering implication</span>
+
+          <p>
+            The recommendation provides a practical balance between simulation
+            reliability and computational efficiency when coupling the primary
+            and secondary atomization models.
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="project-framework">
+
+      <div class="section-title">
+        <span>05.</span> Analytical Framework
+      </div>
+
+      <div class="framework-grid">
+
+        <div class="framework-item">
+          <span class="framework-label">Droplet Size</span>
+          <strong>Diameter</strong>
+          <p>
+            Assessed whether droplets became smaller and approached a stable downstream trend.
+          </p>
+        </div>
+
+        <div class="framework-item">
+          <span class="framework-label">Momentum</span>
+          <strong>Axial velocity</strong>
+          <p>
+            Tracked acceleration of droplets as momentum transferred from the surrounding gas.
+          </p>
+        </div>
+
+        <div class="framework-item">
+          <span class="framework-label">Thermal</span>
+          <strong>Temperature</strong>
+          <p>
+            Evaluated droplet cooling as the liquid travelled downstream through the atomizing gas.
+          </p>
+        </div>
+
+        <div class="framework-item">
+          <span class="framework-label">Constraint</span>
+          <strong>Breakup length</strong>
+          <p>
+            Used the end of the continuous liquid core as a minimum feasible transition location.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="project-framework">
+
+      <div class="section-title">
+        <span>06.</span> Limitations & Follow-Up
+      </div>
+
+      <div class="framework-grid">
+
+        <div class="framework-item">
+          <span class="framework-label">Sphericity</span>
+          <strong>Inconclusive metrics</strong>
+          <p>
+            The available geometric measures did not establish a clear relationship between sphericity and axial distance.
+          </p>
+        </div>
+
+        <div class="framework-item">
+          <span class="framework-label">Weber Number</span>
+          <strong>Approximate inputs</strong>
+          <p>
+            Gas density and surface tension were approximated rather than evaluated locally within the flow field.
+          </p>
+        </div>
+
+        <div class="framework-item">
+          <span class="framework-label">Simulation Domain</span>
+          <strong>More downstream data</strong>
+          <p>
+            A longer axial domain would provide additional data points and strengthen trend validation.
+          </p>
+        </div>
+
+        <div class="framework-item">
+          <span class="framework-label">Generalisability</span>
+          <strong>Additional cases</strong>
+          <p>
+            Further material, gas and geometry combinations would be needed to develop a broader transition-plane rule.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="project-skills">
+
+      <div class="section-title">
+        <span>07.</span> Relevant Skills
+      </div>
+
+      <div class="skill-strip">
+        <span>OpenFOAM</span>
+        <span>CFD</span>
+        <span>Volume-of-Fluid</span>
+        <span>Thermo-Fluids</span>
+        <span>Statistical Data Analysis</span>
+        <span>Simulation Post-Processing</span>
+        <span>Engineering Judgement</span>
+      </div>
+
+    </section>
+
+    <div class="project-footer-nav">
+      <a href="../index.html#work">← Selected Work</a>
+      <a href="airbus-a320.html">Airbus A320 Capacity Analysis →</a>
+    </div>
+
+  </main>
+
+  <footer class="footer section-shell">
+    <span>© 2026 Ishaan Fartyal</span>
+    <span class="mono">
+      Engineering × Strategy × Analytics × Impact
+    </span>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 560">
+  <rect width="1000" height="560" fill="#0d1115"/>
+  <g stroke="#33404c" fill="none">
+    <path d="M80 450 L260 240 L420 450 Z"/>
+    <rect x="440" y="220" width="390" height="230"/>
+    <line x1="440" y1="300" x2="830" y2="300"/>
+    <line x1="440" y1="375" x2="830" y2="375"/>
+    <line x1="540" y1="220" x2="540" y2="450"/>
+    <line x1="640" y1="220" x2="640" y2="450"/>
+    <line x1="740" y1="220" x2="740" y2="450"/>
+  </g>
+  <text x="70" y="95" fill="#e8edf2" font-family="Arial" font-size="46" letter-spacing="6">TU/e</text>
+  <text x="70" y="140" fill="#758493" font-family="monospace" font-size="18">EINDHOVEN UNIVERSITY OF TECHNOLOGY</text>
+</svg>

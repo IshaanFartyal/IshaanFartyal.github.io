@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Project page coming soon — Ishaan Fartyal." />
+  <title>Coming Soon — Ishaan Fartyal</title>
+
+  <link rel="stylesheet" href="../styles.css" />
+
+  <style>
+    .coming-soon-page {
+      min-height: calc(100vh - 72px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 0;
+    }
+
+    .coming-soon-card {
+      width: min(760px, 100%);
+      border: 1px solid var(--border);
+      background: rgba(13, 17, 21, 0.82);
+      padding: 56px;
+      text-align: center;
+    }
+
+    .coming-soon-label {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 10px;
+      border: 1px solid rgba(255, 82, 82, 0.30);
+      background: rgba(255, 82, 82, 0.08);
+      color: #ff8a8a;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      margin-bottom: 22px;
+    }
+
+    .coming-soon-card h1 {
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      line-height: 1;
+      margin: 0 0 18px;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+    }
+
+    .coming-soon-card p {
+      color: #b6c0c8;
+      max-width: 560px;
+      margin: 0 auto 26px;
+      font-size: 1.02rem;
+    }
+
+    .coming-soon-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 650px) {
+      .coming-soon-card {
+        padding: 36px 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site-grid" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="../index.html">IF</a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="../index.html#profile">Profile</a>
+      <a href="../index.html#capabilities">Capabilities</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#work">Selected Work</a>
+      <a href="../index.html#toolkit">Toolkit</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+
+    <a
+      class="btn btn-ghost"
+      href="../assets/documents/CV_Ishaan_Fartyal.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View CV ↗
+    </a>
+  </header>
+
+  <main class="coming-soon-page section-shell">
+    <section class="coming-soon-card">
+      <span class="coming-soon-label">Coming Soon</span>
+
+      <h1>Project page coming soon</h1>
+
+      <p>
+        This project is currently being developed. A full case-study page will be added shortly.
+      </p>
+
+      <div class="coming-soon-actions">
+        <a class="btn btn-primary" href="../index.html#work">
+          ← Back to selected work
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
