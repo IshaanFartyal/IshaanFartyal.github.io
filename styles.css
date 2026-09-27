@@ -787,3 +787,81 @@ h1 {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+
+.profile-focus {
+  display: grid;
+  align-content: center;
+  gap: 24px;
+  padding: 40px;
+  border-left: 1px solid var(--border);
+}
+
+.profile-focus-block {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.profile-focus-block:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.profile-focus-block span {
+  color: var(--accent);
+  font-size: .68rem;
+  letter-spacing: .08em;
+}
+
+.profile-focus-block h3 {
+  margin: 8px 0 6px;
+  font-size: 1rem;
+}
+
+.profile-focus-block p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .82rem;
+  line-height: 1.6;
+}
+
+/* Formatting overrides for the profile focus section. */
+
+@media (max-width: 1100px) {
+  .profile-focus {
+    grid-column: 1 / -1;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    padding: 50px 20px;
+  }
+
+  .profile-focus-block {
+    padding: 10px 20px;
+    border-bottom: 0;
+    border-right: 1px solid var(--border-soft);
+  }
+
+  .profile-focus-block:last-child {
+    border-right: 0;
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .profile-focus {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+  }
+
+  .profile-focus-block {
+    padding: 0 0 20px;
+    border-right: 0;
+    border-bottom: 1px solid var(--border-soft);
+  }
+
+  .profile-focus-block:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
