@@ -3,20 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="A Python and Streamlit personal finance analytics application that transforms bank-statement data into clear insights on spending, income and savings behaviour."
-  />
+  <meta name="description" content="Finsight is a personal finance analytics app that turns bank statement exports into a clear picture of your money, and runs entirely on your own computer." />
   <title>Finsight — Ishaan Fartyal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
 </head>
-
 <body>
   <div class="site-grid" aria-hidden="true"></div>
 
   <header class="topbar">
     <a class="brand" href="../index.html">IF</a>
-
     <nav class="nav" aria-label="Primary navigation">
       <a href="../index.html#profile">Profile</a>
       <a href="../index.html#capabilities">Capabilities</a>
@@ -25,15 +23,7 @@
       <a href="../index.html#toolkit">Toolkit</a>
       <a href="../index.html#contact">Contact</a>
     </nav>
-
-    <a
-      class="btn btn-ghost"
-      href="../assets/documents/CV_Ishaan_Fartyal.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      View CV ↗
-    </a>
+    <a class="btn btn-ghost" href="../assets/documents/CV_Ishaan_Fartyal.pdf" target="_blank" rel="noopener noreferrer">View CV ↗</a>
   </header>
 
   <main class="project-page section-shell">
@@ -46,337 +36,231 @@
     <section class="project-hero">
 
       <div class="project-hero-copy">
-
         <div class="eyebrow">
-          Python · Financial Analytics · Personal Finance
+          Python · Personal Finance · Data Analytics
         </div>
 
         <h1>Finsight</h1>
 
         <p class="project-summary">
-          A Python and Streamlit personal finance analytics application that
-          transforms bank-statement data into clear insights on spending,
-          income and savings behaviour.
+          A personal finance app that turns your bank statements into a clear
+          picture of your money. It runs on your own computer, so your
+          statements never leave your device.
         </p>
 
         <div class="project-meta">
           <span>Python</span>
+          <span>pandas</span>
           <span>Streamlit</span>
-          <span>Pandas</span>
-          <span>Data Analytics</span>
-          <span>Personal Finance</span>
+          <span>Plotly</span>
+          <span>pytest</span>
         </div>
 
         <div class="project-links">
           <a
+            class="btn btn-primary"
+            href="https://finsight-live.streamlit.app/"
+            target="_blank"
+            rel="noopener noreferrer">
+            Try the demo ↗
+          </a>
+          <a
             class="btn btn-ghost"
             href="https://github.com/IshaanFartyal/finsight"
             target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub Repository ↗
+            rel="noopener noreferrer">
+            View the code ↗
           </a>
         </div>
 
+        <p class="project-disclaimer">
+          The demo runs on made-up statements. Beta, version 0.2.0.
+        </p>
       </div>
 
       <div class="project-hero-visual">
-        <span class="visual-label">
-          Data Pipeline / Financial Analytics
-        </span>
+        <span class="visual-label">Private by design</span>
 
         <div class="project-stat">
-          <span class="stat-value">4</span>
-          <span class="stat-label">Core financial metrics</span>
+          <span class="stat-value">0</span>
+          <span class="stat-label">accounts, servers or bank logins.<br>Everything runs locally.</span>
         </div>
       </div>
 
     </section>
 
-    <!-- STAR -->
-    <section class="star-grid">
 
-      <article class="star-card">
-        <span class="star-label mono">01 / Situation</span>
-        <h2>The problem</h2>
+    <!-- 01 PROBLEM -->
+    <section class="story">
+      <div class="story-label"><span>01</span> Problem</div>
+      <div class="story-body">
+        <h2>Three ways to track your money, each with a catch</h2>
         <p>
-          Personal bank-statement exports are often difficult to interpret
-          directly. Transaction descriptions, categories and formatting vary
-          between banks, making it harder to build a clear picture of spending
-          behaviour, income and savings performance.
+          If you have accounts at several banks, each bank's app only shows
+          its own account. Budgeting apps want your bank login or keep your
+          data on their servers. A spreadsheet is private, but takes hours
+          every month.
         </p>
-      </article>
-
-      <article class="star-card">
-        <span class="star-label mono">02 / Task</span>
-        <h2>The objective</h2>
         <p>
-          Build a lightweight analytics application that can accept
-          bank-statement CSV files, normalize transactions into a common
-          structure and convert the raw data into useful personal-finance
-          metrics and visual insights.
+          I wanted the full picture without giving up the data.
         </p>
-      </article>
-
-      <article class="star-card">
-        <span class="star-label mono">03 / Action</span>
-        <h2>What I developed</h2>
-        <p>
-          I built Finsight in Python using Streamlit and pandas. The application
-          detects supported bank formats and delimiters, routes uploaded files
-          through dedicated or generic parsers, and converts transactions into
-          a standardized schema for analysis.
-        </p>
-      </article>
-
-      <article class="star-card">
-        <span class="star-label mono">04 / Result</span>
-        <h2>How insights are presented</h2>
-        <p>
-          The processed data is presented through an interactive dashboard
-          showing key financial metrics, spending breakdowns, monthly trends
-          and a transaction-level view.
-        </p>
-      </article>
-
+      </div>
     </section>
 
-    <!-- ANALYTICS FRAMEWORK -->
-    <section class="project-framework">
 
-      <div class="section-heading">
-        <span class="section-number mono">05</span>
-        <div>
-          <p class="eyebrow">Analytics Framework</p>
-          <h2>From raw bank statement to financial insight</h2>
+    <!-- 02 WHAT IT DOES -->
+    <section class="story">
+      <div class="story-label"><span>02</span> Product</div>
+      <div class="story-body">
+        <h2>Drop in your statements, get the picture</h2>
+        <p>
+          Export a CSV from each bank and drop the files in. Finsight combines
+          them into one view of income, spending, savings and where the money
+          went.
+        </p>
+
+        <figure class="shot">
+          <a href="../assets/images/finsight/dashboard.webp" target="_blank" rel="noopener noreferrer">
+            <img src="../assets/images/finsight/dashboard.webp"
+                 alt="Finsight overview page showing income, expenses, savings and savings rate for a month, an income versus expenses bar chart and a spending-by-category donut chart."
+                 width="1600" height="900" />
+          </a>
+          <figcaption>The monthly overview, on demo data from an ING and a Revolut account.</figcaption>
+        </figure>
+
+        <div class="shot-grid">
+          <figure class="shot">
+            <a href="../assets/images/finsight/transactions.webp" target="_blank" rel="noopener noreferrer">
+              <img src="../assets/images/finsight/transactions.webp"
+                   alt="Finsight transactions table with rows from ING and Revolut, each labelled as expense, refund or transfer."
+                   loading="lazy" width="1600" height="900" />
+            </a>
+            <figcaption>
+              <strong>It knows a transfer from a purchase.</strong>
+              Money moving between your own accounts is not counted as income
+              or spending.
+            </figcaption>
+          </figure>
+
+          <figure class="shot">
+            <a href="../assets/images/finsight/categories.webp" target="_blank" rel="noopener noreferrer">
+              <img src="../assets/images/finsight/categories.webp"
+                   alt="Finsight categories page listing four merchants to review, with 88 percent of transactions already categorised."
+                   loading="lazy" width="1600" height="900" />
+            </a>
+            <figcaption>
+              <strong>It asks once, then remembers.</strong>
+              Each unknown merchant is listed once; one choice categorises all
+              its transactions.
+            </figcaption>
+          </figure>
+
+          <figure class="shot">
+            <a href="../assets/images/finsight/insights.webp" target="_blank" rel="noopener noreferrer">
+              <img src="../assets/images/finsight/insights.webp"
+                   alt="Finsight insights page comparing this month's spending per category with the recent average, and summarising recurring payments."
+                   loading="lazy" width="1600" height="900" />
+            </a>
+            <figcaption>
+              <strong>It points out what changed.</strong>
+              Recurring payments, price increases, double charges and unusual
+              spending.
+            </figcaption>
+          </figure>
+        </div>
+
+        <p>
+          It also has budgets, savings goals, a month-end spending forecast,
+          currency conversion, and CSV and Excel export.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- 03 HOW IT IS BUILT -->
+    <section class="story">
+      <div class="story-label"><span>03</span> Build</div>
+      <div class="story-body">
+        <h2>Calculated, not generated</h2>
+        <p>
+          Every number and insight comes from plain Python rules that can be
+          read and tested. A recurring payment, for example, needs three
+          payments at a regular interval. Nothing is guessed.
+        </p>
+
+        <div class="findings">
+          <div class="finding">
+            <span class="finding-value">5 banks</span>
+            <p>Revolut, Wise, ING, Rabobank and bunq, plus a fallback for other CSV files.</p>
+          </div>
+          <div class="finding">
+            <span class="finding-value">452 tests</span>
+            <p>Automated with pytest and run on every push through GitHub Actions.</p>
+          </div>
+          <div class="finding">
+            <span class="finding-value">Two forms</span>
+            <p>A browser app, and a Windows desktop program that needs no Python installed.</p>
+          </div>
+          <div class="finding">
+            <span class="finding-value">No server</span>
+            <p>Each user's own computer does the work. A private session writes nothing to disk.</p>
+          </div>
+        </div>
+
+        <p>
+          The core logic (parsing, categorising, transfer detection, insights)
+          is kept separate from the interface, which is what made the desktop
+          version possible without rewriting it.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- 04 STATUS -->
+    <section class="story">
+      <div class="story-label"><span>04</span> Status</div>
+      <div class="story-body">
+        <h2>Where it stands</h2>
+        <p>
+          Finsight is a working product: the online demo is live and a Windows
+          desktop beta is built. I am the sole developer and I use it on my
+          own statements.
+        </p>
+
+        <div class="result-highlight">
+          <span class="result-title">What is not done yet</span>
+          <p>
+            It has no outside users yet. The ING, Rabobank and bunq readers
+            are built from documented formats and have not been verified
+            against real exports. Next: first testers, a signed installer and
+            a Mac version.
+          </p>
         </div>
       </div>
-
-      <div class="framework-grid">
-        <article class="framework-item">
-          <span class="framework-label mono">INPUT</span>
-          <h3>Bank-statement CSV</h3>
-          <p>
-            Users upload exported transaction data from supported banks or
-            another CSV format that can be interpreted by the generic parser.
-          </p>
-        </article>
-
-        <article class="framework-item">
-          <span class="framework-label mono">PARSING</span>
-          <h3>Format detection</h3>
-          <p>
-            Finsight automatically detects delimiters and attempts to identify
-            the originating bank before routing the file to the relevant parser.
-          </p>
-        </article>
-
-        <article class="framework-item">
-          <span class="framework-label mono">NORMALIZATION</span>
-          <h3>Common transaction schema</h3>
-          <p>
-            Transactions from different sources are transformed into a
-            consistent structure so downstream analytics can operate
-            independently of the original bank format.
-          </p>
-        </article>
-
-        <article class="framework-item">
-          <span class="framework-label mono">ANALYTICS</span>
-          <h3>Financial metrics</h3>
-          <p>
-            The application calculates income, expenses, savings, savings rate,
-            category-level spending and monthly financial trends.
-          </p>
-        </article>
-      </div>
-
     </section>
 
-    <!-- APPLICATION FEATURES -->
-    <section class="project-framework">
-
-      <div class="section-heading">
-        <span class="section-number mono">06</span>
-        <div>
-          <p class="eyebrow">Application Features</p>
-          <h2>Core functionality</h2>
-        </div>
-      </div>
-
-      <div class="framework-grid">
-        <article class="framework-item">
-          <span class="framework-label mono">01</span>
-          <h3>Bank format detection</h3>
-          <p>
-            Dedicated parsers are available for Revolut and Wise, with a
-            generic fallback parser for unsupported CSV formats.
-          </p>
-        </article>
-
-        <article class="framework-item">
-          <span class="framework-label mono">02</span>
-          <h3>Transaction categorization</h3>
-          <p>
-            Rule-based logic categorizes transactions, while categories and
-            keyword rules can be adjusted by the user.
-          </p>
-        </article>
-
-        <article class="framework-item">
-          <span class="framework-label mono">03</span>
-          <h3>Financial summary</h3>
-          <p>
-            Income, expenses, savings and savings rate provide an immediate
-            overview of financial performance.
-          </p>
-        </article>
-
-        <article class="framework-item">
-          <span class="framework-label mono">04</span>
-          <h3>Spending analysis</h3>
-          <p>
-            Spending can be reviewed by category and across monthly time
-            periods to make changes in financial behaviour easier to identify.
-          </p>
-        </article>
-      </div>
-
-    </section>
-
-    <!-- ENGINEERING DECISIONS -->
-    <section class="project-framework">
-
-      <div class="section-heading">
-        <span class="section-number mono">07</span>
-        <div>
-          <p class="eyebrow">Engineering Decisions</p>
-          <h2>Designing for different bank formats</h2>
-        </div>
-      </div>
-
-      <div class="framework-grid">
-        <article class="framework-item">
-          <span class="framework-label mono">PARSERS</span>
-          <h3>Modular architecture</h3>
-          <p>
-            Bank-specific parsing is separated from the analytics layer,
-            allowing new bank integrations to be added without redesigning the
-            core application.
-          </p>
-        </article>
-
-        <article class="framework-item">
-          <span class="framework-label mono">FALLBACK</span>
-          <h3>Generic CSV support</h3>
-          <p>
-            When a bank is not recognized, the application attempts a
-            best-effort interpretation using a generic parser and clearly
-            indicates that the format was not detected.
-          </p>
-        </article>
-
-        <article class="framework-item">
-          <span class="framework-label mono">PRIVACY</span>
-          <h3>Local-first usage</h3>
-          <p>
-            Finsight is currently designed as a local development and portfolio
-            application, avoiding the need to upload real bank data to a remote
-            service.
-          </p>
-        </article>
-
-        <article class="framework-item">
-          <span class="framework-label mono">TESTING</span>
-          <h3>Synthetic sample data</h3>
-          <p>
-            Sample CSV files contain synthetic financial information so parser
-            and dashboard functionality can be tested without exposing real
-            transaction histories.
-          </p>
-        </article>
-      </div>
-
-    </section>
 
     <!-- SKILLS -->
-    <section class="project-skills">
-
-      <div class="section-heading">
-        <span class="section-number mono">08</span>
-        <div>
-          <p class="eyebrow">Skills</p>
-          <h2>Relevant skills</h2>
+    <section class="story story-last">
+      <div class="story-label"><span>05</span> Skills</div>
+      <div class="story-body">
+        <div class="skill-strip">
+          <span>Software Development</span>
+          <span>Python</span>
+          <span>pandas</span>
+          <span>Streamlit</span>
+          <span>Plotly</span>
+          <span>Automated Testing (pytest)</span>
+          <span>GitHub Actions</span>
+          <span>Desktop Packaging</span>
         </div>
       </div>
-
-      <div class="skill-strip">
-        <span>Python</span>
-        <span>Pandas</span>
-        <span>Streamlit</span>
-        <span>Data Cleaning</span>
-        <span>CSV Parsing</span>
-        <span>Rule-Based Categorization</span>
-        <span>Financial Analytics</span>
-        <span>Dashboard Design</span>
-      </div>
-
     </section>
 
-    <!-- ROADMAP -->
-    <section class="project-framework">
-
-      <div class="section-heading">
-        <span class="section-number mono">09</span>
-        <div>
-          <p class="eyebrow">Roadmap</p>
-          <h2>Planned development</h2>
-        </div>
-      </div>
-
-      <div class="framework-grid">
-        <article class="framework-item">
-          <span class="framework-label mono">BANKS</span>
-          <h3>Additional integrations</h3>
-          <p>
-            Verify ING support and expand dedicated parsing to ABN AMRO,
-            Rabobank and Bunq.
-          </p>
-        </article>
-
-        <article class="framework-item">
-          <span class="framework-label mono">ANALYTICS</span>
-          <h3>Deeper spending insights</h3>
-          <p>
-            Add monthly filtering, recurring subscription detection and unusual
-            spending detection.
-          </p>
-        </article>
-
-        <article class="framework-item">
-          <span class="framework-label mono">PLANNING</span>
-          <h3>Budgeting tools</h3>
-          <p>
-            Introduce user-defined budget goals and recommendations based on
-            observed spending behaviour.
-          </p>
-        </article>
-
-        <article class="framework-item">
-          <span class="framework-label mono">FUTURE</span>
-          <h3>AI-assisted insights</h3>
-          <p>
-            Explore AI-supported interpretation of financial patterns while
-            keeping the underlying calculations transparent.
-          </p>
-        </article>
-      </div>
-
-    </section>
 
     <div class="project-footer-nav">
-      <a href="asml-strategy.html">← ASML Technology Strategy</a>
-      <a href="ure.html">University Racing Eindhoven →</a>
+      <a href="../index.html#work">← Selected Work</a>
+      <a href="airbus-a320.html">Airbus A320 Ramp-Up Analysis →</a>
     </div>
 
   </main>

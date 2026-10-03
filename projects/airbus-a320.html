@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Evaluating alternative A320 production ramp-up strategies by combining capacity, supply-chain and NPV analysis." />
-  <title>Airbus A320 Capacity Analysis — Ishaan Fartyal</title>
+  <meta name="description" content="A Python model and 25-page report on how far the value of Airbus's A320 Family ramp-up depends on its suppliers keeping pace. Independent analysis on public data." />
+  <title>Airbus A320 Ramp-Up Analysis — Ishaan Fartyal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
@@ -20,7 +23,7 @@
       <a href="../index.html#toolkit">Toolkit</a>
       <a href="../index.html#contact">Contact</a>
     </nav>
-    <a class="btn btn-ghost" href="../assets/documents/CV_Ishaan_Fartyal.pdf" target="_blank">View CV ↗</a>
+    <a class="btn btn-ghost" href="../assets/documents/CV_Ishaan_Fartyal.pdf" target="_blank" rel="noopener noreferrer">View CV ↗</a>
   </header>
 
   <main class="project-page section-shell">
@@ -34,192 +37,279 @@
 
       <div class="project-hero-copy">
         <div class="eyebrow">
-          Operations · Capacity · Finance
+          Operations · Supply Chain · Finance
         </div>
 
-        <h1>Airbus A320 Capacity Analysis</h1>
+        <h1 class="h1-long">Airbus A320 Ramp-Up Analysis</h1>
 
         <p class="project-summary">
-          Evaluating alternative Airbus A320 production ramp-up scenarios by
-          combining operational modelling with financial analysis to assess
-          feasibility and profitability.
+          Airbus is targeting a production rate of 70 to 75 A320 Family
+          aircraft a month by the end of 2027. Whether that investment earns a
+          return depends heavily on its suppliers, who have held production
+          back before. To assess how much, I built a Python model and presented
+          my findings in a report.
         </p>
 
         <div class="project-meta">
           <span>Python</span>
-          <span>Capacity Analysis</span>
-          <span>Supply Chain</span>
-          <span>Scenario Analysis</span>
           <span>NPV</span>
+          <span>Scenario Analysis</span>
+          <span>Supply Chain</span>
+          <span>Capacity</span>
         </div>
 
         <div class="project-links">
           <a
-            class="btn btn-ghost"
-            href="https://github.com/IshaanFartyal/Airbus-A320-Capacity-Analysis"
+            class="btn btn-primary"
+            href="../assets/documents/Airbus_A320_Ramp-Up_Report_Ishaan_Fartyal.pdf"
             target="_blank"
             rel="noopener noreferrer">
-            GitHub Repository ↗
+            Read the report ↗
+          </a>
+          <a
+            class="btn btn-ghost"
+            href="https://github.com/IshaanFartyal/Airbus-A320-Capacity-Analysis/tree/v1.0"
+            target="_blank"
+            rel="noopener noreferrer">
+            View the code ↗
           </a>
         </div>
+
+        <p class="project-disclaimer">
+          Independent analysis based on public data. Not affiliated with or
+          endorsed by Airbus.
+        </p>
       </div>
 
       <div class="project-hero-visual">
-        <span class="visual-label">Production System / Capacity Study</span>
+        <span class="visual-label">The finding in one number</span>
 
         <div class="project-stat">
-          <span class="stat-value">75</span>
-          <span class="stat-label">Aircraft / month target</span>
+          <span class="stat-value">82%</span>
+          <span class="stat-label">of Airbus's plan must be supported by<br>suppliers before the ramp-up pays</span>
         </div>
       </div>
 
     </section>
 
 
-    <!-- STAR -->
-    <section class="star-grid">
-
-      <article class="star-card">
-        <div class="star-label">
-          <span>01</span>
-          Situation
-        </div>
-
-        <h2>Scaling A320 production</h2>
-
+    <!-- 01 SITUATION -->
+    <section class="story">
+      <div class="story-label"><span>01</span> Situation</div>
+      <div class="story-body">
+        <h2>Sold out for eleven years</h2>
         <p>
-          Airbus has announced plans to increase A320-family production toward
-          75 aircraft per month. Achieving this requires production capacity and
-          supply-chain availability to scale alongside the planned ramp-up.
+          Airbus has more than 7,000 A320neo Family aircraft on order, but
+          delivered only 607 in 2025. At that pace, it would take over eleven
+          years to build what it has already sold, and new orders keep coming
+          in. So Airbus plans to raise production from about 51 aircraft a
+          month to 75.
         </p>
-      </article>
-
-
-      <article class="star-card">
-        <div class="star-label">
-          <span>02</span>
-          Task
-        </div>
-
-        <h2>Evaluate viable ramp-up paths</h2>
-
         <p>
-          The objective is to compare alternative production-ramp scenarios and
-          determine which pathways offer the strongest balance between operational
-          feasibility and financial attractiveness.
-        </p>
-      </article>
-
-
-      <article class="star-card">
-        <div class="star-label">
-          <span>03</span>
-          Action
-        </div>
-
-        <h2>Build a quantitative scenario model</h2>
-
-        <p>
-          I developed a Python-based capacity model to compare alternative
-          ramp-up trajectories, supply-chain availability and steady-state
-          production targets.
+          The difficulty is that it has postponed that target several times
+          since 2022, and each time it has pointed to its suppliers, engines
+          above all.
         </p>
 
-        <ul>
-          <li>Defined alternative production-ramp scenarios.</li>
-          <li>Modelled capacity and supply-chain availability over time.</li>
-          <li>Compared alternative steady-state production rates.</li>
-          <li>Calculated NPV for each production strategy.</li>
-          <li>Assessed operational and financial trade-offs across scenarios.</li>
-        </ul>
-      </article>
+        <figure class="chart">
+          <img src="../assets/images/airbus/historical-deliveries.png"
+               alt="Line chart of annual A320 Family deliveries from 1988 to 2025, peaking at 642 in 2019, falling to 446 in 2020 and recovering to 607 in 2025."
+               loading="lazy" width="1600" height="787" />
+          <figcaption>A320 Family deliveries, 1988 to 2025. They have not yet recovered their 2019 peak. Source: Airbus.</figcaption>
+        </figure>
+      </div>
+    </section>
 
 
-      <article class="star-card result-card">
-        <div class="star-label">
-          <span>04</span>
-          Result
+    <!-- 02 TASK -->
+    <section class="story">
+      <div class="story-label"><span>02</span> Question</div>
+      <div class="story-body">
+        <h2>Airbus can build bigger factories. It cannot build its suppliers' engines.</h2>
+        <p>
+          An aircraft cannot be delivered without its engines and structures.
+          So I asked one question: how dependent is the value of the ramp-up
+          on suppliers' ability to keep pace?
+        </p>
+      </div>
+    </section>
+
+
+    <!-- 03 ACTION -->
+    <section class="story">
+      <div class="story-label"><span>03</span> Approach</div>
+      <div class="story-body">
+        <h2>A model built on three limits</h2>
+        <p>
+          I built a Python model of yearly deliveries and cash flows from 2026
+          to 2035. In any year, Airbus delivers the lowest of three limits.
+        </p>
+
+        <div class="limits">
+          <div class="limit">
+            <span class="framework-label">Limit 1</span>
+            <strong>Airbus capacity</strong>
+            <p>What its own factories can build.</p>
+          </div>
+          <div class="limit limit-key">
+            <span class="framework-label">Limit 2</span>
+            <strong>Supply ceiling</strong>
+            <p>The share of the plan that suppliers can support.</p>
+          </div>
+          <div class="limit">
+            <span class="framework-label">Limit 3</span>
+            <strong>Demand</strong>
+            <p>What customers are ready to take.</p>
+          </div>
         </div>
 
-        <h2>Prioritize realistic strategic options</h2>
-
         <p>
-          The model provides a structured basis for comparing production
-          strategies across operational feasibility and financial performance.
+          The ramp-up is then valued against what the existing factories could
+          deliver with no new investment, using net present value at a 12%
+          discount rate (Airbus's own is 11.9%).
         </p>
+        <p>
+          Airbus does not publish its margin per aircraft, the cost of the
+          ramp-up or its existing capacity. I assumed them, stated them, and
+          tested each one over a range. This is scenario analysis, not a
+          forecast.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- 04 RESULT -->
+    <section class="story">
+      <div class="story-label"><span>04</span> Findings</div>
+      <div class="story-body">
+        <h2>Worth doing, but only just</h2>
+
+        <div class="findings">
+          <div class="finding">
+            <span class="finding-value">€1.0bn</span>
+            <p>Value of the ramp-up over ten years if suppliers support 85% of the plan. Cash flow stays negative until 2031.</p>
+          </div>
+          <div class="finding">
+            <span class="finding-value">82%</span>
+            <p>Break-even supplier availability. Against its earlier plans, Airbus has so far achieved about 77%.</p>
+          </div>
+          <div class="finding">
+            <span class="finding-value">€0.33bn</span>
+            <p>Value of each point of availability: −€0.7bn at 80%, €2.7bn at 90%.</p>
+          </div>
+          <div class="finding">
+            <span class="finding-value">€0.4–0.6bn</span>
+            <p>Cost of each year of unplanned delay. Two years makes the ten-year value negative.</p>
+          </div>
+        </div>
+
+        <h3>Three points decide it</h3>
+        <p>
+          The base case sits only three points above break-even. Below about
+          73% availability, suppliers cannot support more aircraft than the
+          existing factories could already build, and the whole investment is
+          lost.
+        </p>
+
+        <figure class="chart">
+          <img src="../assets/images/airbus/npv-by-availability.png"
+               alt="Line chart of net present value against supply-chain availability. The Airbus target case is worth 1.0 billion euros at the assumed 85% availability and breaks even at 82%."
+               loading="lazy" width="1600" height="795" />
+          <figcaption>Value of the ramp-up, 2026 to 2035, by supply-chain availability. Source: own model.</figcaption>
+        </figure>
+
+        <h3>Nothing else matters as much</h3>
+        <p>
+          I moved every assumption to its downside and upside value in turn.
+          Supplier availability moves the result more than any other input.
+          Demand barely moves it, because suppliers hold deliveries below what
+          customers would take anyway.
+        </p>
+
+        <figure class="chart">
+          <img src="../assets/images/airbus/sensitivity-tornado.png"
+               alt="Tornado chart of net present value when each assumption moves to its downside or upside value. Supply-chain availability has the widest range, from minus 0.7 to 2.7 billion euros; delivery demand has the narrowest."
+               loading="lazy" width="1600" height="795" />
+          <figcaption>Sensitivity of the ten-year value to each assumption. Source: own model.</figcaption>
+        </figure>
+
+        <h3>The money goes out years before it comes back</h3>
+        <p>
+          The investment is made before the extra aircraft are delivered, so
+          the low point is −€2.7bn in 2027. With so long a payback, anything
+          that postpones deliveries removes much of the value.
+        </p>
+
+        <figure class="chart">
+          <img src="../assets/images/airbus/cumulative-cash-flow.png"
+               alt="Line chart of cumulative cash flow of the ramp-up, falling to minus 2.7 billion euros in 2027, turning positive from 2031 and reaching 4.1 billion euros in 2035."
+               loading="lazy" width="1600" height="795" />
+          <figcaption>Cumulative cash flow of the ramp-up, undiscounted. Source: own model.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+
+    <!-- 05 IMPLICATIONS -->
+    <section class="story">
+      <div class="story-label"><span>05</span> So what</div>
+      <div class="story-body">
+        <h2>What it means for Airbus</h2>
+
+        <ol class="implications">
+          <li>
+            <strong>Paying to help suppliers is justified.</strong>
+            Five points of availability are worth €1.7bn, against €2.5bn
+            assumed for Airbus's whole capacity investment.
+          </li>
+          <li>
+            <strong>Invest when suppliers are ready, not by the calendar.</strong>
+            A delay Airbus sees coming costs €0.2bn to €0.9bn less than one it
+            does not.
+          </li>
+          <li>
+            <strong>A slightly slower plan may be worth more.</strong>
+            The fastest ramp gains only €0.1bn over one that reaches rate 75 a
+            year later, while a one-year slip costs €0.6bn.
+          </li>
+          <li>
+            <strong>After rate 75, the next gain is supply, not capacity.</strong>
+            Deliveries stop at 765 aircraft a year against capacity and demand
+            of 900.
+          </li>
+        </ol>
 
         <div class="result-highlight">
-          <span class="result-title">Decision output</span>
+          <span class="result-title">How far to trust it</span>
           <p>
-            Identify which ramp-up pathways are operationally realistic,
-            financially attractive and suitable for prioritization as a strategic
-            course of action.
+            The absolute figures rest on my own assumptions and are
+            indicative. The comparisons between cases are sturdier, because
+            the same assumptions sit on both sides.
           </p>
         </div>
-      </article>
-
-    </section>
-
-
-    <!-- ANALYTICAL FRAMEWORK -->
-    <section class="project-framework">
-
-      <div class="section-title">
-        <span>05.</span> Analytical Framework
       </div>
-
-      <div class="framework-grid">
-
-        <div class="framework-item">
-          <span class="framework-label">Operational</span>
-          <strong>Production capacity</strong>
-          <p>Ramp trajectories and achievable monthly output.</p>
-        </div>
-
-        <div class="framework-item">
-          <span class="framework-label">Supply Chain</span>
-          <strong>Availability constraints</strong>
-          <p>Ability of upstream capacity to support production growth.</p>
-        </div>
-
-        <div class="framework-item">
-          <span class="framework-label">Financial</span>
-          <strong>NPV</strong>
-          <p>Financial attractiveness of alternative production scenarios.</p>
-        </div>
-
-        <div class="framework-item">
-          <span class="framework-label">Strategic</span>
-          <strong>Scenario prioritization</strong>
-          <p>Balancing feasibility, return and ramp realism.</p>
-        </div>
-
-      </div>
-
     </section>
 
 
     <!-- SKILLS -->
-    <section class="project-skills">
-
-      <div class="section-title">
-        <span>06.</span> Relevant Skills
+    <section class="story story-last">
+      <div class="story-label"><span>06</span> Skills</div>
+      <div class="story-body">
+        <div class="skill-strip">
+          <span>Python (pandas, matplotlib)</span>
+          <span>NPV &amp; DCF</span>
+          <span>Scenario Analysis</span>
+          <span>Sensitivity Analysis</span>
+          <span>Supply-Chain &amp; Capacity Analysis</span>
+          <span>Public Company Data</span>
+          <span>Report Writing</span>
+        </div>
       </div>
-
-      <div class="skill-strip">
-        <span>Python</span>
-        <span>Capacity Analysis</span>
-        <span>Scenario Analysis</span>
-        <span>Supply-Chain Analysis</span>
-        <span>NPV Analysis</span>
-        <span>Strategic Prioritization</span>
-      </div>
-
     </section>
 
 
     <div class="project-footer-nav">
-      <a href="../index.html#analysis">← Selected Work</a>
+      <a href="finsight.html">← Finsight</a>
       <a href="asml-strategy.html">ASML Technology Strategy →</a>
     </div>
 
