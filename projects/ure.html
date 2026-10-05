@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Engineering work spanning mechanical design, manufacturing constraints, cost modelling and lifecycle analysis for a Formula Student race car." />
+  <meta name="description" content="Two seasons on TU/e's Formula Student team: designing an in-wheel motor assembly, then modelling what the car's inverter costs to build at volume." />
   <title>University Racing Eindhoven — Ishaan Fartyal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
@@ -13,95 +16,298 @@
   <header class="topbar">
     <a class="brand" href="../index.html">IF</a>
     <nav class="nav" aria-label="Primary navigation">
-      <a href="../index.html#profile">Profile</a>
-      <a href="../index.html#capabilities">Capabilities</a>
-      <a href="../index.html#experience">Experience</a>
-      <a href="../index.html#work">Selected Work</a>
-      <a href="../index.html#toolkit">Toolkit</a>
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#background">Background</a>
+      <a href="../index.html#skills">Skills</a>
       <a href="../index.html#contact">Contact</a>
     </nav>
-    <a class="btn btn-ghost" href="../assets/documents/CV_Ishaan_Fartyal.pdf" target="_blank">View CV ↗</a>
+    <a class="btn btn-ghost" href="../assets/documents/CV_Ishaan_Fartyal.pdf" target="_blank" rel="noopener noreferrer">View CV ↗</a>
   </header>
 
   <main class="project-page section-shell">
-    <a class="project-back" href="../index.html#work">← Back to selected work</a>
 
+    <a class="project-back" href="../index.html#work">
+      ← Back to selected work
+    </a>
+
+    <!-- HERO -->
     <section class="project-hero">
+
       <div class="project-hero-copy">
-        <div class="eyebrow">Mechanical Design · Cost Engineering</div>
-        <h1>University Racing Eindhoven</h1>
-        <p class="project-summary">Engineering work spanning mechanical design, manufacturing constraints, cost modelling and lifecycle analysis for a Formula Student race car.</p>
-        <div class="project-meta"><span>Siemens NX</span><span>Mechanical Design</span><span>Cost Engineering</span><span>Manufacturing</span><span>Lifecycle Analysis</span></div>
-        
+        <div class="eyebrow">
+          Formula Student · Cost Engineering · Mechanical Design
+        </div>
+
+        <h1 class="h1-long">University Racing Eindhoven</h1>
+
+        <p class="project-summary">
+          Two seasons on TU/e's Formula Student team. In the first I designed
+          part of the car. In the second I worked out what the car costs, and
+          what it would cost to build thousands of them.
+        </p>
+
+        <div class="project-meta">
+          <span>Cost Modelling</span>
+          <span>Excel</span>
+          <span>MATLAB</span>
+          <span>Siemens NX</span>
+          <span>Design for Manufacturing</span>
+        </div>
+
+        <div class="project-links">
+          <a
+            class="btn btn-primary"
+            href="../assets/images/ure/poster-mass-production.webp"
+            target="_blank"
+            rel="noopener noreferrer">
+            View the poster ↗
+          </a>
+        </div>
       </div>
+
       <div class="project-hero-visual">
-        <span class="visual-label">Formula Student / engineering economics</span>
+        <span class="visual-label">Formula Student Czech Republic</span>
+
+        <div class="project-stat">
+          <span class="stat-value">11th</span>
+          <span class="stat-label">of 52 teams in the Cost event,<br>where the team presented this work</span>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- 01 CONTEXT -->
+    <section class="story">
+      <div class="story-label"><span>01</span> Context</div>
+      <div class="story-body">
+        <h2>A race car is also a business case</h2>
+        <p>
+          Formula Student teams design and build an electric race car every
+          year. They are judged on more than speed: in the Cost event, a team
+          has to defend what its car costs and how it would be manufactured.
+        </p>
+        <p>
+          I spent 2024–25 as a Mechanical Design Engineer and 2025–26 as a
+          Cost Engineer, so I saw the same car from both sides.
+        </p>
       </div>
     </section>
 
-    <section class="project-case">
-      
-      <div class="project-content">
-        <div class="project-label">01 / Context</div>
-        <div class="project-detail">
-          <h2>Engineering with a business lens</h2>
-          
-<p>At University Racing Eindhoven, I worked first as a Mechanical Design Engineer and later as a Cost Engineer. Together, the two roles gave me experience on both the technical design side and the financial and lifecycle implications of engineering choices.</p>
 
-        </div>
-      </div>
-      <div class="project-content">
-        <div class="project-label">02 / Design</div>
-        <div class="project-detail">
-          <h2>Mechanical Design Engineer</h2>
-          
-<p>I designed an in-wheel motor assembly in Siemens NX, translating requirements, preferences and constraints into a detailed CAD assembly.</p>
-<ul>
-  <li>Considered packaging and vehicle integration.</li>
-  <li>Evaluated manufacturability and production limitations.</li>
-  <li>Iterated the design with other vehicle sub-teams.</li>
-</ul>
+    <!-- 02 DESIGN -->
+    <section class="story">
+      <div class="story-label"><span>02</span> Design · 2024–25</div>
+      <div class="story-body">
+        <h2>Designing an in-wheel motor assembly</h2>
 
-        </div>
-      </div>
-      <div class="project-content">
-        <div class="project-label">03 / Cost</div>
-        <div class="project-detail">
-          <h2>Cost Engineer</h2>
-          
-<p>I developed and maintained detailed Bills of Materials and Costed Carbonized Bills of Materials to evaluate component cost and lifecycle emissions across manufacturing and distribution.</p>
-<p>I also built an Excel cost model for the inverter, comparing in-house manufacturing and assembly with outsourcing across different production volumes to identify break-even points and sourcing implications.</p>
+        <div class="design-split">
+          <div class="design-copy">
+            <p>
+              I designed an in-wheel motor assembly in Siemens NX, turning
+              requirements and constraints into a detailed CAD assembly, and
+              iterated it with the other vehicle sub-teams.
+            </p>
 
-        </div>
-      </div>
-      <div class="project-content">
-        <div class="project-label">04 / Decision making</div>
-        <div class="project-detail">
-          <h2>Turning engineering into business insight</h2>
-          
-<div class="project-highlight">
-  <strong>Core learning</strong>
-  Engineering choices can be evaluated not only on technical performance, but also on cost, scalability, sourcing, manufacturability and lifecycle impact.
-</div>
-<p>This experience is what first pushed me toward problems at the intersection of engineering, operations and business strategy.</p>
+            <dl class="spec-list">
+              <div>
+                <dt>Tool</dt>
+                <dd>Siemens NX</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>Packaging, manufacturability and integration with the rest of the car</dd>
+              </div>
+              <div>
+                <dt>Worked with</dt>
+                <dd>The other vehicle sub-teams</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd>Design study, not built</dd>
+              </div>
+            </dl>
+          </div>
 
-        </div>
-      </div>
-      <div class="project-content">
-        <div class="project-label">05 / Skills</div>
-        <div class="project-detail">
-          <h2>Relevant Skills</h2>
-          
-<p>Mechanical design, Siemens NX, cost modelling, break-even analysis, sourcing analysis, lifecycle assessment and cross-functional engineering collaboration.</p>
-
+          <figure class="design-visual">
+            <span class="visual-label">Section view · Siemens NX</span>
+            <img src="../assets/images/ure/motor-assembly-section.webp"
+                 alt="Sectioned CAD view of an in-wheel motor assembly, showing the housing, rotor shaft and bearings."
+                 loading="lazy" width="666" height="750" />
+          </figure>
         </div>
       </div>
     </section>
+
+
+    <!-- 03 COST -->
+    <section class="story">
+      <div class="story-label"><span>03</span> Cost · 2025–26</div>
+      <div class="story-body">
+        <h2>What does it cost to build one, or five thousand?</h2>
+        <p>
+          As Cost Engineer I maintained the car's Bill of Materials and its
+          costed, carbonised version, which track the cost and lifecycle
+          emissions of every part.
+        </p>
+        <p>
+          The Cost event also asks how a prototype would be mass-produced. I
+          took the inverter as the test case and built a model in Excel and
+          MATLAB comparing four ways to make it.
+        </p>
+
+        <div class="findings">
+          <div class="finding">
+            <span class="finding-value">By hand</span>
+            <p>A small team assembles each inverter. Almost no equipment, but 16 hours of work per unit.</p>
+          </div>
+          <div class="finding">
+            <span class="finding-value">By machine</span>
+            <p>A €70,000 pick-and-place machine populates the circuit boards. High upfront cost, low cost per unit.</p>
+          </div>
+          <div class="finding">
+            <span class="finding-value">In-house</span>
+            <p>The team carries the fixed costs itself: equipment, floor space, training and development.</p>
+          </div>
+          <div class="finding">
+            <span class="finding-value">Outsourced</span>
+            <p>A supplier carries them instead. Hand assembly is priced at cost plus a margin; machine assembly at a fixed price per unit.</p>
+          </div>
+        </div>
+
+        <h3>What the model shows</h3>
+        <p>
+          At low volume the fixed costs dominate, so cost per unit falls
+          steeply as volume grows. In-house hand assembly then levels off at
+          about €1,200 an inverter, because the labour does not get cheaper
+          with scale. The in-house machine route keeps falling, with a small
+          step up each time another machine is needed. Outsourced machine
+          assembly is a flat €10,000 an inverter, an estimate from the
+          department manager, so it only makes sense for the first few units.
+        </p>
+
+        <figure class="plot" id="inverter-plot">
+          <div class="plot-panel">
+            <span class="visual-label">Cost per inverter · log scales</span>
+            <div class="plot-legend" aria-hidden="true">
+              <span><i style="background:#3987e5"></i>By hand</span>
+              <span><i style="background:#d95926"></i>By machine</span>
+              <span><i class="solid"></i>In-house</span>
+              <span><i class="dashed"></i>Outsourced</span>
+            </div>
+            <div class="plot-scroll">
+            <svg viewBox="0 0 720 430" role="img" aria-labelledby="inv-title inv-desc" data-l="62" data-pw="502" data-t="18" data-ph="366">
+              <title id="inv-title">Cost per inverter against production volume</title>
+              <desc id="inv-desc">Hand assembly, in-house and outsourced, falls from about 257,000 euros at one unit and levels off between about 1,200 and 1,500 euros per inverter. In-house machine assembly falls from 70,000 euros at one unit to under 100 euros at 5,000 units, with a small step up each time another machine is needed. Outsourced machine assembly is shown as a flat 10,000 euros.</desc>
+              <line x1="62" y1="384.0" x2="564" y2="384.0" class="cg"/><text x="52" y="388.0" class="ct" text-anchor="end">€10</text><line x1="62" y1="310.8" x2="564" y2="310.8" class="cg"/><text x="52" y="314.8" class="ct" text-anchor="end">€100</text><line x1="62" y1="237.6" x2="564" y2="237.6" class="cg"/><text x="52" y="241.6" class="ct" text-anchor="end">€1k</text><line x1="62" y1="164.4" x2="564" y2="164.4" class="cg"/><text x="52" y="168.4" class="ct" text-anchor="end">€10k</text><line x1="62" y1="91.2" x2="564" y2="91.2" class="cg"/><text x="52" y="95.2" class="ct" text-anchor="end">€100k</text><line x1="62" y1="18.0" x2="564" y2="18.0" class="cg"/><text x="52" y="22.0" class="ct" text-anchor="end">€1M</text><line x1="62.0" y1="18" x2="62.0" y2="384" class="cg"/><text x="62.0" y="404" class="ct" text-anchor="middle">1</text><line x1="197.7" y1="18" x2="197.7" y2="384" class="cg"/><text x="197.7" y="404" class="ct" text-anchor="middle">10</text><line x1="333.4" y1="18" x2="333.4" y2="384" class="cg"/><text x="333.4" y="404" class="ct" text-anchor="middle">100</text><line x1="469.1" y1="18" x2="469.1" y2="384" class="cg"/><text x="469.1" y="404" class="ct" text-anchor="middle">1,000</text><line x1="564.0" y1="18" x2="564.0" y2="384" class="cg"/><text x="564.0" y="404" class="ct" text-anchor="middle">5,000</text>
+              <text x="313" y="424" class="ct" text-anchor="middle">Production volume (inverters, log scale)</text>
+              <path d="M62.0,56.7 L102.9,78.6 L126.8,91.3 L143.7,100.3 L156.9,107.3 L167.6,112.9 L176.7,117.7 L184.6,121.8 L191.5,125.3 L197.7,128.5 L203.3,131.4 L208.5,134.1 L213.2,136.4 L217.5,138.7 L221.6,140.7 L225.4,142.6 L229.0,144.4 L232.4,146.1 L235.5,147.7 L238.6,149.1 L241.4,150.6 L244.2,151.9 L246.8,153.2 L249.3,154.4 L251.7,155.5 L254.0,156.6 L256.3,157.7 L258.4,158.7 L260.5,159.7 L262.5,160.6 L264.4,161.6 L266.3,162.4 L268.1,163.3 L269.8,164.1 L271.6,164.9 L273.2,165.6 L274.8,166.4 L276.4,167.1 L277.9,167.8 L279.4,168.5 L280.9,169.1 L282.3,169.8 L283.7,170.4 L285.0,171.0 L286.4,171.6 L287.7,172.1 L288.9,172.7 L290.2,173.2 L291.4,173.8 L292.6,174.3 L293.7,174.8 L294.9,175.3 L296.0,175.8 L297.1,176.2 L298.2,176.7 L299.3,177.2 L300.3,177.6 L301.3,178.0 L302.3,178.5 L303.3,178.9 L304.3,179.3 L305.3,179.7 L306.2,180.1 L307.1,180.4 L308.0,180.8 L308.9,181.2 L309.8,181.5 L310.7,181.9 L311.6,182.3 L312.4,182.6 L313.2,182.9 L314.1,183.3 L314.9,183.6 L315.7,183.9 L316.5,184.2 L317.3,184.5 L318.0,184.8 L318.8,185.1 L319.5,185.4 L320.3,185.7 L321.0,186.0 L321.7,186.3 L322.4,186.5 L323.2,186.8 L323.8,187.1 L324.5,187.3 L325.2,187.6 L325.9,187.9 L326.6,188.1 L327.2,188.4 L327.9,188.6 L328.5,188.8 L329.1,189.1 L329.8,189.3 L330.4,189.5 L331.0,189.8 L331.6,190.0 L332.2,190.2 L333.4,190.6 L334.6,191.1 L335.7,191.5 L336.9,191.9 L338.0,192.3 L339.0,192.6 L340.1,193.0 L341.1,193.4 L342.2,193.7 L343.2,194.1 L344.2,194.4 L345.1,194.8 L346.1,195.1 L347.0,195.4 L348.0,195.7 L348.9,196.0 L349.8,196.3 L350.7,196.6 L351.5,196.9 L352.4,197.2 L353.3,197.4 L354.1,197.7 L354.9,198.0 L355.7,198.2 L356.5,198.5 L357.3,198.7 L358.1,199.0 L358.9,199.2 L359.6,199.4 L360.4,199.7 L361.1,199.9 L361.9,200.1 L362.6,200.3 L363.3,200.5 L364.0,200.7 L364.7,200.9 L365.4,201.2 L366.1,201.4 L366.7,201.5 L367.4,201.7 L368.1,201.9 L368.7,202.1 L369.4,202.3 L370.0,202.5 L370.6,202.7 L371.3,202.8 L371.9,203.0 L372.5,203.2 L373.1,203.3 L374.0,203.6 L374.9,203.8 L375.7,204.1 L376.6,204.3 L377.4,204.5 L378.3,204.7 L379.1,205.0 L379.9,205.2 L380.7,205.4 L381.5,205.6 L382.3,205.8 L383.0,206.0 L383.8,206.2 L384.5,206.4 L385.3,206.5 L386.0,206.7 L386.7,206.9 L387.4,207.1 L388.1,207.2 L388.8,207.4 L389.5,207.6 L390.2,207.7 L390.9,207.9 L391.5,208.0 L392.2,208.2 L392.8,208.3 L393.5,208.5 L394.1,208.6 L394.7,208.8 L395.4,208.9 L396.0,209.1 L396.6,209.2 L397.2,209.3 L398.0,209.5 L398.8,209.7 L399.5,209.8 L400.3,210.0 L401.1,210.2 L401.8,210.3 L402.5,210.5 L403.3,210.6 L404.0,210.8 L404.7,210.9 L405.4,211.1 L406.1,211.2 L406.8,211.3 L407.4,211.5 L408.1,211.6 L408.8,211.7 L409.4,211.9 L410.1,212.0 L410.7,212.1 L411.3,212.2 L412.0,212.4 L412.6,212.5 L413.2,212.6 L413.8,212.7 L414.5,212.8 L415.3,213.0 L416.0,213.1 L416.7,213.2 L417.4,213.4 L418.2,213.5 L418.8,213.6 L419.5,213.7 L420.2,213.9 L420.9,214.0 L421.6,214.1 L422.2,214.2 L422.9,214.3 L423.5,214.4 L424.1,214.5 L424.8,214.6 L425.4,214.7 L426.0,214.8 L426.6,214.9 L427.2,215.0 L427.9,215.1 L428.6,215.2 L429.3,215.4 L430.0,215.5 L430.7,215.6 L431.4,215.7 L432.1,215.8 L432.7,215.9 L433.4,216.0 L434.0,216.1 L434.6,216.1 L435.3,216.2 L435.9,216.3 L436.5,216.4 L437.1,216.5 L437.7,216.6 L438.4,216.7 L439.1,216.8 L439.8,216.9 L440.5,217.0 L441.2,217.1 L441.8,217.1 L442.5,217.2 L443.1,217.3 L443.8,217.4 L444.4,217.5 L445.0,217.6 L445.6,217.6 L446.2,217.7 L446.8,217.8 L447.5,217.9 L448.2,218.0 L448.9,218.0 L449.5,218.1 L450.2,218.2 L450.8,218.3 L451.5,218.3 L452.1,218.4 L452.7,218.5 L453.4,218.6 L454.0,218.6 L454.6,218.7 L455.2,218.8 L455.8,218.8 L456.5,218.9 L457.2,219.0 L457.8,219.1 L458.4,219.1 L459.1,219.2 L459.7,219.3 L460.3,219.3 L460.9,219.4 L461.5,219.4 L462.1,219.5 L462.8,219.6 L463.5,219.6 L464.1,219.7 L464.7,219.8 L465.4,219.8 L466.0,219.9 L466.6,220.0 L467.2,220.0 L467.8,220.1 L468.5,220.1 L469.1,220.2 L469.8,220.2 L470.4,220.3 L471.1,220.4 L471.7,220.4 L472.3,220.5 L472.9,220.5 L473.5,220.6 L474.2,220.6 L474.8,220.7 L475.5,220.7 L476.1,220.8 L476.1,220.8 L476.8,220.8 L477.4,220.9 L478.0,221.0 L478.6,221.0 L479.2,221.1 L479.9,221.1 L480.5,221.2 L481.1,221.2 L481.8,221.2 L482.4,221.3 L483.0,221.3 L483.6,221.4 L484.2,221.4 L484.9,221.5 L485.5,221.5 L486.1,221.6 L486.7,221.6 L487.4,221.7 L488.0,221.7 L488.6,221.7 L489.2,221.8 L489.8,221.8 L490.5,221.9 L491.1,221.9 L491.7,222.0 L492.3,222.0 L492.9,222.0 L493.5,222.1 L494.2,222.1 L494.8,222.2 L495.4,222.2 L496.0,222.2 L496.6,222.3 L497.2,222.3 L497.9,222.3 L498.5,222.4 L499.1,222.4 L499.7,222.5 L500.3,222.5 L501.0,222.5 L501.6,222.6 L502.2,222.6 L502.8,222.6 L503.4,222.7 L504.0,222.7 L504.7,222.7 L505.3,222.8 L505.9,222.8 L506.5,222.8 L507.1,222.9 L507.7,222.9 L508.4,222.9 L509.0,223.0 L509.6,223.0 L510.2,223.0 L510.8,223.1 L511.4,223.1 L512.0,223.1 L512.6,223.1 L513.3,223.2 L513.9,223.2 L514.5,223.2 L515.1,223.3 L515.7,223.3 L516.3,223.3 L516.9,223.3 L517.0,223.3 L517.6,223.4 L518.2,223.4 L518.8,223.4 L519.4,223.5 L520.0,223.5 L520.7,223.5 L521.3,223.5 L521.9,223.6 L522.5,223.6 L523.1,223.6 L523.7,223.6 L524.3,223.7 L525.0,223.7 L525.6,223.7 L526.2,223.7 L526.8,223.8 L527.4,223.8 L528.0,223.8 L528.6,223.8 L529.2,223.9 L529.8,223.9 L530.5,223.9 L531.1,223.9 L531.7,223.9 L532.3,224.0 L532.9,224.0 L533.5,224.0 L534.1,224.0 L534.7,224.0 L535.3,224.1 L535.9,224.1 L536.5,224.1 L537.2,224.1 L537.8,224.1 L538.4,224.2 L539.0,224.2 L539.6,224.2 L540.2,224.2 L540.8,224.2 L540.8,224.2 L540.9,224.2 L541.5,224.3 L542.1,224.3 L542.7,224.3 L543.3,224.3 L543.9,224.3 L544.5,224.4 L545.1,224.4 L545.7,224.4 L546.3,224.4 L546.9,224.4 L547.5,224.4 L548.1,224.5 L548.7,224.5 L549.4,224.5 L550.0,224.5 L550.6,224.5 L551.2,224.5 L551.8,224.6 L552.4,224.6 L553.0,224.6 L553.6,224.6 L554.2,224.6 L554.8,224.6 L555.4,224.6 L556.0,224.7 L556.6,224.7 L557.3,224.7 L557.8,224.7 L557.8,224.7 L558.4,224.7 L559.0,224.7 L559.6,224.7 L560.2,224.8 L560.8,224.8 L561.4,224.8 L562.0,224.8 L562.7,224.8 L563.3,224.8 L563.9,224.8 L564.0,224.8" class="cl" stroke="#3987e5" stroke-dasharray="6 5"/>
+              <path d="M62.0,61.2 L102.9,83.0 L126.8,95.8 L143.7,104.8 L156.9,111.7 L167.6,117.4 L176.7,122.2 L184.6,126.3 L191.5,129.9 L197.7,133.1 L203.3,136.0 L208.5,138.6 L213.2,141.0 L217.5,143.2 L221.6,145.3 L225.4,147.2 L229.0,149.0 L232.4,150.7 L235.5,152.2 L238.6,153.7 L241.4,155.2 L244.2,156.5 L246.8,157.8 L249.3,159.0 L251.7,160.2 L254.0,161.3 L256.3,162.4 L258.4,163.4 L260.5,164.4 L262.5,165.3 L264.4,166.2 L266.3,167.1 L268.1,168.0 L269.8,168.8 L271.6,169.6 L273.2,170.4 L274.8,171.1 L276.4,171.8 L277.9,172.5 L279.4,173.2 L280.9,173.9 L282.3,174.5 L283.7,175.1 L285.0,175.8 L286.4,176.3 L287.7,176.9 L288.9,177.5 L290.2,178.0 L291.4,178.6 L292.6,179.1 L293.7,179.6 L294.9,180.1 L296.0,180.6 L297.1,181.1 L298.2,181.5 L299.3,182.0 L300.3,182.4 L301.3,182.9 L302.3,183.3 L303.3,183.7 L304.3,184.1 L305.3,184.5 L306.2,184.9 L307.1,185.3 L308.0,185.7 L308.9,186.1 L309.8,186.4 L310.7,186.8 L311.6,187.2 L312.4,187.5 L313.2,187.8 L314.1,188.2 L314.9,188.5 L315.7,188.8 L316.5,189.1 L317.3,189.5 L318.0,189.8 L318.8,190.1 L319.5,190.4 L320.3,190.7 L321.0,190.9 L321.7,191.2 L322.4,191.5 L323.2,191.8 L323.8,192.1 L324.5,192.3 L325.2,192.6 L325.9,192.8 L326.6,193.1 L327.2,193.4 L327.9,193.6 L328.5,193.8 L329.1,194.1 L329.8,194.3 L330.4,194.6 L331.0,194.8 L331.6,195.0 L332.2,195.2 L333.4,195.7 L334.6,196.1 L335.7,196.5 L336.9,196.9 L338.0,197.3 L339.0,197.7 L340.1,198.1 L341.1,198.5 L342.2,198.8 L343.2,199.2 L344.2,199.5 L345.1,199.9 L346.1,200.2 L347.0,200.5 L348.0,200.8 L348.9,201.2 L349.8,201.5 L350.7,201.8 L351.5,202.0 L352.4,202.3 L353.3,202.6 L354.1,202.9 L354.9,203.2 L355.7,203.4 L356.5,203.7 L357.3,203.9 L358.1,204.2 L358.9,204.4 L359.6,204.7 L360.4,204.9 L361.1,205.1 L361.9,205.4 L362.6,205.6 L363.3,205.8 L364.0,206.0 L364.7,206.2 L365.4,206.4 L366.1,206.6 L366.7,206.8 L367.4,207.0 L368.1,207.2 L368.7,207.4 L369.4,207.6 L370.0,207.8 L370.6,208.0 L371.3,208.2 L371.9,208.3 L372.5,208.5 L373.1,208.7 L374.0,208.9 L374.9,209.2 L375.7,209.4 L376.6,209.7 L377.4,209.9 L378.3,210.1 L379.1,210.3 L379.9,210.6 L380.7,210.8 L381.5,211.0 L382.3,211.2 L383.0,211.4 L383.8,211.6 L384.5,211.8 L385.3,212.0 L386.0,212.2 L386.7,212.3 L387.4,212.5 L388.1,212.7 L388.8,212.9 L389.5,213.0 L390.2,213.2 L390.9,213.4 L391.5,213.5 L392.2,213.7 L392.8,213.8 L393.5,214.0 L394.1,214.1 L394.7,214.3 L395.4,214.4 L396.0,214.6 L396.6,214.7 L397.2,214.9 L398.0,215.0 L398.8,215.2 L399.5,215.4 L400.3,215.6 L401.1,215.7 L401.8,215.9 L402.5,216.1 L403.3,216.2 L404.0,216.4 L404.7,216.5 L405.4,216.7 L406.1,216.8 L406.8,217.0 L407.4,217.1 L408.1,217.2 L408.8,217.4 L409.4,217.5 L410.1,217.6 L410.7,217.8 L411.3,217.9 L412.0,218.0 L412.6,218.1 L413.2,218.2 L413.8,218.4 L414.5,218.5 L415.3,218.6 L416.0,218.8 L416.7,218.9 L417.4,219.1 L418.2,219.2 L418.8,219.3 L419.5,219.4 L420.2,219.6 L420.9,219.7 L421.6,219.8 L422.2,219.9 L422.9,220.0 L423.5,220.1 L424.1,220.2 L424.8,220.4 L425.4,220.5 L426.0,220.6 L426.6,220.7 L427.2,220.8 L427.9,220.9 L428.6,221.0 L429.3,221.1 L430.0,221.2 L430.7,221.3 L431.4,221.4 L432.1,221.5 L432.7,221.6 L433.4,221.7 L434.0,221.8 L434.6,221.9 L435.3,222.0 L435.9,222.1 L436.5,222.2 L437.1,222.3 L437.7,222.4 L438.4,222.5 L439.1,222.6 L439.8,222.7 L440.5,222.8 L441.2,222.9 L441.8,223.0 L442.5,223.1 L443.1,223.2 L443.8,223.3 L444.4,223.3 L445.0,223.4 L445.6,223.5 L446.2,223.6 L446.8,223.7 L447.5,223.7 L448.2,223.8 L448.9,223.9 L449.5,224.0 L450.2,224.1 L450.8,224.2 L451.5,224.2 L452.1,224.3 L452.7,224.4 L453.4,224.5 L454.0,224.5 L454.6,224.6 L455.2,224.7 L455.8,224.8 L456.5,224.8 L457.2,224.9 L457.8,225.0 L458.4,225.1 L459.1,225.1 L459.7,225.2 L460.3,225.3 L460.9,225.3 L461.5,225.4 L462.1,225.5 L462.8,225.5 L463.5,225.6 L464.1,225.7 L464.7,225.7 L465.4,225.8 L466.0,225.9 L466.6,225.9 L467.2,226.0 L467.8,226.0 L468.5,226.1 L469.1,226.2 L469.8,226.2 L470.4,226.3 L471.1,226.4 L471.7,226.4 L472.3,226.5 L472.9,226.5 L473.5,226.6 L474.2,226.6 L474.8,226.7 L475.5,226.8 L476.1,226.8 L476.1,226.8 L476.8,226.9 L477.4,226.9 L478.0,227.0 L478.6,227.0 L479.2,227.1 L479.9,227.1 L480.5,227.2 L481.1,227.2 L481.8,227.3 L482.4,227.3 L483.0,227.4 L483.6,227.4 L484.2,227.5 L484.9,227.5 L485.5,227.6 L486.1,227.6 L486.7,227.7 L487.4,227.7 L488.0,227.8 L488.6,227.8 L489.2,227.9 L489.8,227.9 L490.5,227.9 L491.1,228.0 L491.7,228.0 L492.3,228.1 L492.9,228.1 L493.5,228.2 L494.2,228.2 L494.8,228.2 L495.4,228.3 L496.0,228.3 L496.6,228.4 L497.2,228.4 L497.9,228.4 L498.5,228.5 L499.1,228.5 L499.7,228.6 L500.3,228.6 L501.0,228.6 L501.6,228.7 L502.2,228.7 L502.8,228.7 L503.4,228.8 L504.0,228.8 L504.7,228.9 L505.3,228.9 L505.9,228.9 L506.5,229.0 L507.1,229.0 L507.7,229.0 L508.4,229.1 L509.0,229.1 L509.6,229.1 L510.2,229.2 L510.8,229.2 L511.4,229.2 L512.0,229.3 L512.6,229.3 L513.3,229.3 L513.9,229.3 L514.5,229.4 L515.1,229.4 L515.7,229.4 L516.3,229.5 L516.9,229.5 L517.0,229.5 L517.6,229.5 L518.2,229.6 L518.8,229.6 L519.4,229.6 L520.0,229.6 L520.7,229.7 L521.3,229.7 L521.9,229.7 L522.5,229.8 L523.1,229.8 L523.7,229.8 L524.3,229.8 L525.0,229.9 L525.6,229.9 L526.2,229.9 L526.8,229.9 L527.4,230.0 L528.0,230.0 L528.6,230.0 L529.2,230.0 L529.8,230.1 L530.5,230.1 L531.1,230.1 L531.7,230.1 L532.3,230.1 L532.9,230.2 L533.5,230.2 L534.1,230.2 L534.7,230.2 L535.3,230.3 L535.9,230.3 L536.5,230.3 L537.2,230.3 L537.8,230.3 L538.4,230.4 L539.0,230.4 L539.6,230.4 L540.2,230.4 L540.8,230.4 L540.8,230.4 L540.9,230.4 L541.5,230.5 L542.1,230.5 L542.7,230.5 L543.3,230.5 L543.9,230.5 L544.5,230.6 L545.1,230.6 L545.7,230.6 L546.3,230.6 L546.9,230.6 L547.5,230.7 L548.1,230.7 L548.7,230.7 L549.4,230.7 L550.0,230.7 L550.6,230.7 L551.2,230.8 L551.8,230.8 L552.4,230.8 L553.0,230.8 L553.6,230.8 L554.2,230.8 L554.8,230.9 L555.4,230.9 L556.0,230.9 L556.6,230.9 L557.3,230.9 L557.8,230.9 L557.8,230.9 L558.4,230.9 L559.0,231.0 L559.6,231.0 L560.2,231.0 L560.8,231.0 L561.4,231.0 L562.0,231.0 L562.7,231.0 L563.3,231.1 L563.9,231.1 L564.0,231.1" class="cl" stroke="#3987e5"/>
+              <path d="M62.0,164.4 L564.0,164.4" class="cl" stroke="#d95926" stroke-dasharray="6 5"/>
+              <path d="M62.0,102.5 L102.9,124.6 L126.8,137.5 L143.7,146.6 L156.9,153.7 L167.6,159.5 L176.7,164.4 L184.6,168.6 L191.5,172.4 L197.7,175.7 L203.3,178.7 L208.5,181.5 L213.2,184.0 L217.5,186.4 L221.6,188.6 L225.4,190.6 L229.0,192.5 L232.4,194.4 L235.5,196.1 L238.6,197.7 L241.4,199.2 L244.2,200.7 L246.8,202.1 L249.3,203.5 L251.7,204.8 L254.0,206.0 L256.3,207.2 L258.4,208.4 L260.5,209.5 L262.5,210.6 L264.4,211.6 L266.3,212.6 L268.1,213.6 L269.8,214.5 L271.6,215.4 L273.2,216.3 L274.8,217.2 L276.4,218.0 L277.9,218.9 L279.4,219.7 L280.9,220.4 L282.3,221.2 L283.7,221.9 L285.0,222.7 L286.4,223.4 L287.7,224.1 L288.9,224.8 L290.2,225.4 L291.4,226.1 L292.6,226.7 L293.7,227.3 L294.9,228.0 L296.0,228.6 L297.1,229.1 L298.2,229.7 L299.3,230.3 L300.3,230.9 L301.3,231.4 L302.3,231.9 L303.3,232.5 L304.3,233.0 L305.3,233.5 L306.2,234.0 L307.1,234.5 L308.0,235.0 L308.9,235.5 L309.8,236.0 L310.7,236.4 L311.6,236.9 L312.4,237.3 L313.2,237.8 L314.1,238.2 L314.9,238.7 L315.7,239.1 L316.5,239.5 L317.3,239.9 L318.0,240.3 L318.8,240.7 L319.5,241.1 L320.3,241.5 L321.0,241.9 L321.7,242.3 L322.4,242.7 L323.2,243.1 L323.8,243.5 L324.5,243.8 L325.2,244.2 L325.9,244.5 L326.6,244.9 L327.2,245.3 L327.9,245.6 L328.5,245.9 L329.1,246.3 L329.8,246.6 L330.4,247.0 L331.0,247.3 L331.6,247.6 L332.2,247.9 L333.4,248.6 L334.6,249.2 L335.7,249.8 L336.9,250.4 L338.0,251.0 L339.0,251.6 L340.1,252.1 L341.1,252.7 L342.2,253.2 L343.2,253.8 L344.2,254.3 L345.1,254.8 L346.1,255.3 L347.0,255.8 L348.0,256.3 L348.9,256.8 L349.8,257.3 L350.7,257.7 L351.5,258.2 L352.4,258.7 L353.3,259.1 L354.1,259.6 L354.9,260.0 L355.7,260.4 L356.5,260.8 L357.3,261.3 L358.1,261.7 L358.9,262.1 L359.6,262.5 L360.4,262.9 L361.1,263.3 L361.9,263.7 L362.6,264.1 L363.3,264.4 L364.0,264.8 L364.7,265.2 L365.4,265.5 L366.1,265.9 L366.7,266.3 L367.4,266.6 L368.1,267.0 L368.7,267.3 L369.4,267.6 L370.0,268.0 L370.6,268.3 L371.3,268.6 L371.9,269.0 L372.5,269.3 L373.1,269.6 L374.0,270.1 L374.9,270.5 L375.7,271.0 L376.6,271.4 L377.4,271.9 L378.3,272.3 L379.1,272.8 L379.9,273.2 L380.7,273.6 L381.5,274.0 L382.3,274.4 L383.0,274.8 L383.8,275.2 L384.5,275.6 L385.3,276.0 L386.0,276.4 L386.7,276.8 L387.4,277.1 L388.1,277.5 L388.8,277.9 L389.5,278.2 L390.2,278.6 L390.9,278.9 L391.5,279.3 L392.2,279.6 L392.8,280.0 L393.5,280.3 L394.1,280.6 L394.7,281.0 L395.4,281.3 L396.0,281.6 L396.6,281.9 L397.2,282.2 L398.0,282.7 L398.8,283.1 L399.5,283.5 L400.3,283.9 L401.1,284.2 L401.8,284.6 L402.5,285.0 L403.3,285.4 L404.0,285.8 L404.7,286.1 L405.4,286.5 L406.1,286.9 L406.8,287.2 L407.4,287.6 L408.1,287.9 L408.8,288.2 L409.4,288.6 L410.1,288.9 L410.7,289.2 L411.3,289.6 L412.0,289.9 L412.6,290.2 L413.2,290.5 L413.8,290.8 L414.5,291.2 L415.3,291.6 L416.0,292.0 L416.7,292.4 L417.4,292.7 L418.2,293.1 L418.8,293.4 L419.5,293.8 L420.2,294.1 L420.9,294.5 L421.6,294.8 L422.2,295.2 L422.9,295.5 L423.5,295.8 L424.1,296.2 L424.8,296.5 L425.4,296.8 L426.0,297.1 L426.6,297.4 L427.2,297.7 L427.9,298.1 L428.6,298.5 L429.3,298.8 L430.0,299.2 L430.7,299.5 L431.4,299.8 L432.1,300.2 L432.7,300.5 L433.4,300.9 L434.0,301.2 L434.6,301.5 L435.3,301.8 L435.9,302.1 L436.5,302.5 L437.1,302.8 L437.7,303.1 L438.4,303.4 L439.1,303.8 L439.8,304.1 L440.5,304.4 L441.2,304.8 L441.8,305.1 L442.5,305.4 L443.1,305.8 L443.8,306.1 L444.4,306.4 L445.0,306.7 L445.6,307.0 L446.2,307.3 L446.8,307.6 L447.5,308.0 L448.2,308.3 L448.9,308.6 L449.5,309.0 L450.2,309.3 L450.8,309.6 L451.5,309.9 L452.1,310.2 L452.7,310.6 L453.4,310.9 L454.0,311.2 L454.6,311.5 L455.2,311.8 L455.8,312.1 L456.5,312.4 L457.2,312.7 L457.8,313.1 L458.4,313.4 L459.1,313.7 L459.7,314.0 L460.3,314.3 L460.9,314.6 L461.5,314.9 L462.1,315.2 L462.8,315.5 L463.5,315.8 L464.1,316.1 L464.7,316.4 L465.4,316.8 L466.0,317.1 L466.6,317.4 L467.2,317.7 L467.8,317.9 L468.5,318.3 L469.1,318.6 L469.8,318.9 L470.4,319.2 L471.1,319.5 L471.7,319.8 L472.3,320.1 L472.9,320.4 L473.5,320.7 L474.2,321.0 L474.8,321.3 L475.5,321.6 L476.1,321.9 L476.1,301.8 L476.8,302.1 L477.4,302.5 L478.0,302.8 L478.6,303.1 L479.2,303.4 L479.9,303.7 L480.5,304.0 L481.1,304.4 L481.8,304.7 L482.4,305.0 L483.0,305.3 L483.6,305.6 L484.2,305.9 L484.9,306.2 L485.5,306.5 L486.1,306.8 L486.7,307.2 L487.4,307.5 L488.0,307.8 L488.6,308.1 L489.2,308.4 L489.8,308.7 L490.5,309.0 L491.1,309.3 L491.7,309.6 L492.3,309.9 L492.9,310.2 L493.5,310.5 L494.2,310.8 L494.8,311.1 L495.4,311.4 L496.0,311.7 L496.6,312.1 L497.2,312.4 L497.9,312.7 L498.5,313.0 L499.1,313.3 L499.7,313.6 L500.3,313.9 L501.0,314.2 L501.6,314.5 L502.2,314.8 L502.8,315.1 L503.4,315.4 L504.0,315.7 L504.7,316.0 L505.3,316.3 L505.9,316.6 L506.5,316.9 L507.1,317.2 L507.7,317.5 L508.4,317.8 L509.0,318.1 L509.6,318.4 L510.2,318.7 L510.8,319.0 L511.4,319.3 L512.0,319.6 L512.6,319.9 L513.3,320.1 L513.9,320.4 L514.5,320.7 L515.1,321.0 L515.7,321.3 L516.3,321.6 L516.9,321.9 L517.0,310.3 L517.6,310.6 L518.2,310.9 L518.8,311.2 L519.4,311.5 L520.0,311.8 L520.7,312.1 L521.3,312.4 L521.9,312.7 L522.5,313.0 L523.1,313.3 L523.7,313.6 L524.3,313.9 L525.0,314.2 L525.6,314.5 L526.2,314.8 L526.8,315.1 L527.4,315.4 L528.0,315.7 L528.6,316.0 L529.2,316.3 L529.8,316.6 L530.5,316.9 L531.1,317.2 L531.7,317.5 L532.3,317.8 L532.9,318.1 L533.5,318.4 L534.1,318.7 L534.7,319.0 L535.3,319.3 L535.9,319.6 L536.5,319.9 L537.2,320.1 L537.8,320.4 L538.4,320.7 L539.0,321.0 L539.6,321.3 L540.2,321.6 L540.8,321.9 L540.8,321.9 L540.9,313.7 L541.5,314.0 L542.1,314.3 L542.7,314.6 L543.3,314.9 L543.9,315.2 L544.5,315.5 L545.1,315.8 L545.7,316.1 L546.3,316.4 L546.9,316.7 L547.5,317.0 L548.1,317.3 L548.7,317.6 L549.4,317.9 L550.0,318.1 L550.6,318.4 L551.2,318.7 L551.8,319.0 L552.4,319.3 L553.0,319.6 L553.6,319.9 L554.2,320.2 L554.8,320.5 L555.4,320.8 L556.0,321.1 L556.6,321.4 L557.3,321.6 L557.8,321.9 L557.8,315.6 L558.4,315.9 L559.0,316.2 L559.6,316.5 L560.2,316.8 L560.8,317.0 L561.4,317.3 L562.0,317.6 L562.7,317.9 L563.3,318.2 L563.9,318.5 L564.0,318.6" class="cl" stroke="#d95926"/>
+              <text x="574" y="168.4" class="cd">Machine, outsourced</text>
+              <text x="574" y="232.1" class="cd">By hand</text>
+              <text x="574" y="322.6" class="cd">Machine, in-house</text>
+              <line class="cx" x1="0" x2="0" y1="18" y2="384" visibility="hidden"/>
+              <rect class="chit" x="62" y="18" width="502" height="366" fill="transparent"/>
+            </svg>
+            </div>
+            <div class="plot-tip" hidden></div>
+          </div>
+          <figcaption>Cost per inverter against production volume for the four routes, redrawn from the model behind the poster.</figcaption>
+          <details class="plot-table">
+            <summary>Show the numbers</summary>
+            <div class="table-wrap">
+              <table class="compare">
+                <thead><tr><th>Units</th><th>Hand, in-house</th><th>Hand, outsourced</th><th>Machine, in-house</th><th>Machine, outsourced</th></tr></thead>
+                <tbody><tr><td>1</td><td>€257,280</td><td>€295,954</td><td>€70,008</td><td>€10,000</td></tr><tr><td>10</td><td>€26,787</td><td>€30,887</td><td>€7,008</td><td>€10,000</td></tr><tr><td>100</td><td>€3,738</td><td>€4,380</td><td>€708</td><td>€10,000</td></tr><tr><td>1,000</td><td>€1,433</td><td>€1,729</td><td>€78</td><td>€10,000</td></tr><tr><td>5,000</td><td>€1,228</td><td>€1,494</td><td>€78</td><td>€10,000</td></tr></tbody>
+              </table>
+            </div>
+          </details>
+        </figure>
+      </div>
+    </section>
+
+
+    <!-- 04 RESULT -->
+    <section class="story">
+      <div class="story-label"><span>04</span> Result</div>
+      <div class="story-body">
+        <h2>Taken to two competitions by the team</h2>
+        <p>
+          The work went onto the "Mass Production vs Prototyping" poster,
+          which my teammates presented at Formula Student Czech Republic and
+          at Formula Student Germany, the largest Formula Student competition
+          in the world.
+        </p>
+
+        <div class="result-pair">
+          <figure class="poster-card">
+            <span class="visual-label">URE20 poster</span>
+            <a href="../assets/images/ure/poster-mass-production.webp" target="_blank" rel="noopener noreferrer">
+              <img src="../assets/images/ure/poster-mass-production.webp"
+                   alt="Poster titled Mass Production vs Prototyping, covering design, material and process choices, with cost charts for the monocoque and the inverter."
+                   loading="lazy" width="1400" height="1980" />
+            </a>
+            <figcaption>
+              <strong>Mass Production vs Prototyping</strong>
+              How design, material and process choices change at volume.
+              <span class="poster-open mono">Open full size ↗</span>
+            </figcaption>
+          </figure>
+
+          <div class="findings findings-stack">
+            <div class="finding">
+              <span class="finding-value">11th <small>of 52</small></span>
+              <p>In the Cost event at Formula Student Czech Republic.</p>
+            </div>
+            <div class="finding">
+              <span class="finding-value">6th <small>of 52</small></span>
+              <p>Overall at Formula Student Czech Republic.</p>
+            </div>
+            <div class="finding">
+              <span class="finding-value">20th <small>of 80</small></span>
+              <p>Overall at Formula Student Germany.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-highlight">
+          <span class="result-title">How far to trust it</span>
+          <p>
+            The inverter model is a first-pass comparison built on estimates.
+            The four routes do not yet carry identical cost items, so I
+            present the shape of the result here, not a break-even volume.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section class="story story-last">
+      <div class="story-label"><span>05</span> Skills</div>
+      <div class="story-body">
+        <div class="skill-strip">
+          <span>Cost Modelling</span>
+          <span>Make-or-Buy Analysis</span>
+          <span>Excel</span>
+          <span>MATLAB</span>
+          <span>BOM &amp; Lifecycle Costing</span>
+          <span>Siemens NX</span>
+          <span>Design for Manufacturing</span>
+          <span>Cross-Team Collaboration</span>
+        </div>
+      </div>
+    </section>
+
 
     <div class="project-footer-nav">
       <a href="bachelors-thesis.html">← Bachelor's Thesis</a>
       <a href="../index.html#work">Selected Work →</a>
     </div>
+
   </main>
 
   <footer class="footer section-shell">
@@ -110,5 +316,37 @@
   </footer>
 
   <script src="../script.js"></script>
+  <script>
+    (function () {
+      var fig = document.getElementById("inverter-plot"); if (!fig) return;
+      var svg = fig.querySelector("svg"), tip = fig.querySelector(".plot-tip"),
+          cx = fig.querySelector(".cx"), hit = fig.querySelector(".chit"), panel = fig.querySelector(".plot-panel");
+      var L = +svg.dataset.l, PW = +svg.dataset.pw, XMAX = Math.log10(5000);
+      var eur = function (v) { return "€" + Math.round(v).toLocaleString("en-GB"); };
+      function costs(u) {
+        return [
+          ["Hand, in-house", (256103.82 * Math.ceil(u / 5000) + 1176.48 * u) / u],
+          ["Hand, outsourced", (256103.82 * 1.15 + (256103.82 / 5000 * u + 1196.48 * u) * 1.15) / u],
+          ["Machine, in-house", (70000 * Math.ceil(u / 1125) + (9335.28 / 1125) * u) / u],
+          ["Machine, outsourced", 10000]
+        ];
+      }
+      function move(e) {
+        var r = svg.getBoundingClientRect(), k = 720 / r.width;
+        var x = Math.min(Math.max((e.clientX - r.left) * k, L), L + PW);
+        var u = Math.max(1, Math.min(5000, Math.round(Math.pow(10, (x - L) / PW * XMAX))));
+        cx.setAttribute("x1", x); cx.setAttribute("x2", x); cx.setAttribute("visibility", "visible");
+        tip.innerHTML = "<strong>" + u.toLocaleString("en-GB") + (u === 1 ? " unit" : " units") + "</strong>" +
+          costs(u).map(function (c) { return "<span>" + c[0] + "<b>" + eur(c[1]) + "</b></span>"; }).join("");
+        tip.hidden = false;
+        var pr = panel.getBoundingClientRect(), left = e.clientX - pr.left + 14;
+        if (left + tip.offsetWidth > pr.width - 8) left = e.clientX - pr.left - tip.offsetWidth - 14;
+        tip.style.left = Math.max(8, left) + "px"; tip.style.top = Math.max(8, e.clientY - pr.top - 20) + "px";
+      }
+      hit.addEventListener("pointermove", move);
+      hit.addEventListener("pointerdown", move);
+      hit.addEventListener("pointerleave", function () { tip.hidden = true; cx.setAttribute("visibility", "hidden"); });
+    })();
+  </script>
 </body>
 </html>
