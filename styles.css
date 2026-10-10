@@ -5,8 +5,8 @@
   --surface-2: #11171c;
   --text: #edf2f6;
   --muted: #87929d;
-  --border: #26313a;
-  --border-soft: rgba(114, 136, 157, 0.22);
+  --border: #7d8791;
+  --border-soft: rgba(200, 207, 214, 0.50);
   --accent: #66a3ff;
   --max-width: 1360px;
 }
@@ -1741,3 +1741,9 @@ section[id] { scroll-margin-top: 96px; }
 @media (max-width: 760px) {
   .result-pair { grid-template-columns: 1fr; }
 }
+
+/* Tag boxes keep the original subtle border */
+.tags span,
+.project-meta span,
+.skill-strip span,
+.tool-list span { border-color: #26313a; }
