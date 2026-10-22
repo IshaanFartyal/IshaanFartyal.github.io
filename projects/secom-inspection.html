@@ -307,11 +307,12 @@
           test period.
         </p>
         <p>
-          I traced this with methods from statistical process control: a
-          median-shift score for every sensor and Shewhart control charts. I
-          also tried three ways of handling the drift: comparing readings with
-          recent history, giving older runs less weight and retraining as new
-          results arrive. None of them helped.
+          I traced the drift with methods from statistical process control: a
+          median-shift score for every sensor (how far its typical reading
+          moved) and Shewhart control charts. I also tried three ways of
+          handling the drift: comparing readings with recent history, giving
+          older runs less weight and retraining as new results arrive. None of
+          them helped.
         </p>
 
         <figure class="plot" id="secom-s059">
@@ -348,12 +349,13 @@
     <section class="story">
       <div class="story-label"><span>05</span> So what</div>
       <div class="story-body">
-        <h2>On this data, a simple policy is the honest answer</h2>
+        <h2>On this data, a simple strategy works best</h2>
 
         <ol class="implications">
           <li>
-            <strong>Inspect nothing below a cost ratio of about 18, everything above it.</strong>
-            No model did meaningfully better than these two.
+            <strong>Inspect nothing below a cost ratio of about 18, everything
+            above it.</strong>
+            No explored ML model did meaningfully better than these two.
           </li>
           <li>
             <strong>Judge models on later data.</strong>
@@ -371,11 +373,21 @@
           <span class="result-title">How far to trust it</span>
           <p>
             The costs are assumptions, so this is a scenario analysis, not a
-            claim about a real fab's savings. The sensors are anonymised, so
-            the findings refer to measurement points, not physical causes.
-            With 26 failures in the test period, every figure is rough.
+            claim about a real fab's savings. The sensors are anonymized, so the
+            findings refer to measurement points, not physical causes. The test
+            period has only 26 failures, so small changes shift the results
+            noticeably.
           </p>
         </div>
+
+        <p style="margin-top: 28px;">
+          The models could be improved by training them on more failures from
+          the later period. From late August, failures became much rarer, about
+          3% of runs against 22% in July, so recent data has few failures to
+          learn from. Retraining only helps once there are enough of them.
+          Additionally, real inspection and failure costs from a fab would turn
+          the cost ratio from a scenario range into an actual decision.
+        </p>
       </div>
     </section>
 
@@ -384,28 +396,27 @@
     <section class="story">
       <div class="story-label"><span>06</span> Reflection</div>
       <div class="story-body">
-        <h2>Was a pretty fun project</h2>
+        <h2>Was pretty fun!</h2>
         <p>
-          Although the machine learning models I developed in this case
-          turned out to be ineffective, building them taught me a great
-          deal about predictive modelling, regression and machine learning.
+          Although the models I developed in this case turned out to be
+          ineffective, building them taught me a lot about predictive modelling,
+          regression and machine learning.
         </p>
         <p>
           The project started as a detour from another one. I was initially
-          developing a TCO (Total Cost of Ownership) model for DAF EV trucks,
+          working on a TCO (Total Cost of Ownership) model for DAF EV trucks,
           exploring the economics behind a transport company considering a
-          switch from diesel to EV. I was looking for an industry
-          depreciation rate for electric trucks, which led me to DAF's
-          listings of used electric trucks, with their price, mileage and
-          usage history. While trying to work out the average depreciation
-          rate across all those variables, I came across linear regression,
-          and, as you can imagine, was instantly hooked onto machine
-          learning. Which this project is a direct realization of.
+          switch from diesel to EV. I was looking for an industry depreciation
+          rate for electric trucks, which led me to DAF's listings of used
+          electric trucks, with their price, mileage and usage history. While
+          trying to work out the average depreciation rate across all those
+          variables, I came across linear regression, and was instantly hooked
+          on machine learning, which naturally led to this project.
         </p>
         <p>
-          In the end, this "detour" turned into a pretty fun exploration
-          into predictive modelling and machine learning. I might have to
-          do another one like this sometime in the future.
+          In the end, this "detour" turned into a pretty fun exploration into
+          predictive modelling and machine learning. Would absolutely do a
+          project like this again.
         </p>
       </div>
     </section>
