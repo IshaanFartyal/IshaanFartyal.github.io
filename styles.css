@@ -1770,3 +1770,13 @@ section[id] { scroll-margin-top: 96px; }
   .hero-with-photo h1, .hero-with-photo .kicker { text-align: center; }
   .hero-with-photo .eyebrow { text-align: center; }
 }
+
+/* Skills: currently learning */
+.skill-learning {
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: .72rem;
+  letter-spacing: .04em;
+}
+#skills .tool-list span { text-transform: none; letter-spacing: .02em; font-size: .74rem; }
