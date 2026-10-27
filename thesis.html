@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bachelor's thesis · Ishaan Fartyal</title>
+  <meta name="description"
+  content="Ishaan Fartyal, Mechanical Engineering graduate from TU Eindhoven. Experience, projects and a bit about me."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ishaan Fartyal" />
+  <meta property="og:description"
+  content="Ishaan Fartyal, Mechanical Engineering graduate from TU Eindhoven. Experience, projects and a bit about me."
+  />
+  <meta property="og:image"
+  content="https://ishaanfartyal.github.io/assets/images/website-preview.png" />
+  <meta property="og:url" content="https://ishaanfartyal.github.io/thesis.html"
+  />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script>try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+  rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script data-goatcounter="https://if-website.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="site-name" href="index.html">Ishaan Fartyal</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html">Welcome</a>
+        <a href="experience.html" aria-current="page">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="story.html">My story</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="theme-toggle" type="button"
+      aria-label="Switch to light mode">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="1.6" aria-hidden="true">
+          <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>
+        </svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="1.6" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2
+                   M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+        </svg>
+      </button>
+    </header>
+
+    <main>
+<div class="project-page">
+
+    <a class="back" href="experience.html">← Experience</a>
+
+    <!-- HERO -->
+    <section class="project-hero">
+
+      <div class="project-hero-copy">
+        <div class="eyebrow">
+          Bachelor's Thesis · CFD · Thermo-Fluids
+        </div>
+
+        <h1 class="h1-long">Finding the Transition Plane in Gas Atomization</h1>
+
+        <p class="project-summary">
+          Simulating how molten metal breaks into powder takes two numerical
+          models, one after the other. I analyzed droplet data from two
+          simulations to find the earliest point where the first model can
+          safely hand over to the second.
+        </p>
+
+        <div class="project-meta">
+          <span>CFD</span>
+          <span>OpenFOAM</span>
+          <span>VOF</span>
+          <span>Data Analysis</span>
+          <span>Thermo-Fluids</span>
+        </div>
+
+        <div class="project-links">
+          <a
+            class="btn btn-primary"
+            href="assets/documents/Bachelors_Thesis_Ishaan_Fartyal.pdf"
+            target="_blank"
+            rel="noopener noreferrer">
+            Read the thesis ↗
+          </a>
+        </div>
+
+        <p class="project-disclaimer">
+          Bachelor Final Project, Mechanical Engineering (Power &amp; Flow),
+          Eindhoven University of Technology, August 2026.
+        </p>
+      </div>
+
+      <div class="project-hero-visual">
+        <span class="visual-label">The recommendation</span>
+
+        <div class="project-stat">
+          <span class="stat-value">20 mm</span>
+          <span class="stat-label">downstream of the nozzle:<br>the recommended
+          transition plane</span>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- 01 SITUATION -->
+    <section class="story">
+      <div class="story-label"><span>01</span> Situation</div>
+      <div class="story-body">
+        <h2>Metal powder starts as a spray</h2>
+        <p>
+          Metal 3D printing needs fine, uniform powder. That powder is made by
+          gas atomization: a high-speed gas jet tears a stream of molten metal
+          into droplets, which cool into particles.
+        </p>
+        <p>
+          Simulating this takes two models. Close to the nozzle, a detailed
+          but expensive model (Volume-of-Fluid) resolves the metal stream as
+          it breaks apart. Further down, a cheaper model treats each droplet
+          as a point. A transition plane is where one hands over to the other.
+        </p>
+
+        <figure class="shot">
+          <img src="assets/images/thesis/transition-planes.webp"
+               alt="Simulation view of a nozzle with droplets falling through
+               three candidate planes at 10, 20 and 30 millimeters."
+               loading="lazy" width="1600" height="900" />
+          <figcaption>Candidate planes at 10, 20 and 30 mm below the nozzle in
+          one of the simulated cases.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+
+    <!-- 02 QUESTION -->
+    <section class="story">
+      <div class="story-label"><span>02</span> Question</div>
+      <div class="story-body">
+        <h2>Too early is unreliable. Too late is expensive.</h2>
+        <p>
+          Hand over too close to the nozzle and the droplets are not yet small
+          and stable enough to be treated as points. Hand over too far away
+          and the expensive model runs longer than it needs to. The question
+          was where the earliest reliable location is.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- 03 APPROACH -->
+    <section class="story">
+      <div class="story-label"><span>03</span> Approach</div>
+      <div class="story-body">
+        <h2>Follow the droplets downstream</h2>
+        <p>
+          I analyzed the output of two OpenFOAM simulations that differ in
+          metal, gas and nozzle geometry: aluminium in nitrogen, and
+          copper-tin in argon. Every detected droplet was sorted into 1 mm
+          slices by its distance from the nozzle.
+        </p>
+        <p>
+          The raw data is noisy, so I used medians and interquartile ranges
+          instead of averages, then tracked how droplet size, speed,
+          temperature and shape change with distance.
+        </p>
+
+        <div class="shot-grid shot-light">
+          <figure class="shot">
+            <a href="assets/images/thesis/droplet-diameter.png" target="_blank"
+            rel="noopener noreferrer">
+              <img src="assets/images/thesis/droplet-diameter.png"
+                   alt="Chart of median droplet diameter against distance from
+                   the nozzle, decreasing gradually."
+                   loading="lazy" width="1000" height="625" />
+            </a>
+            <figcaption>
+            <strong>Droplets get smaller.</strong> Diameter falls and levels
+            off.</figcaption>
+          </figure>
+
+          <figure class="shot">
+            <a href="assets/images/thesis/droplet-velocity.png" target="_blank"
+            rel="noopener noreferrer">
+              <img src="assets/images/thesis/droplet-velocity.png"
+                   alt="Chart of median droplet axial velocity against distance
+                   from the nozzle, increasing steadily."
+                   loading="lazy" width="1000" height="625" />
+            </a>
+            <figcaption>
+            <strong>They speed up.</strong> The gas accelerates
+            them.</figcaption>
+          </figure>
+
+          <figure class="shot">
+            <a href="assets/images/thesis/droplet-temperature.png"
+            target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/thesis/droplet-temperature.png"
+                   alt="Chart of median droplet temperature against distance
+                   from the nozzle, decreasing steadily."
+                   loading="lazy" width="1000" height="625" />
+            </a>
+            <figcaption>
+            <strong>They cool down.</strong> Heat passes to the colder
+            gas.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 04 RESULT -->
+    <section class="story">
+      <div class="story-label"><span>04</span> Result</div>
+      <div class="story-body">
+        <h2>A plane at 20 mm, and a rule for finding it</h2>
+
+        <div class="result-split">
+          <figure class="clip">
+            <div class="clip-frame">
+              <video autoplay loop muted playsinline preload="metadata"
+                     poster="assets/images/thesis/stream-breakup-poster.webp"
+                     width="300" height="850"
+                     aria-label="Animation of the molten metal stream breaking
+                     up below the nozzle, with its outline traced at each time
+                     step.">
+                <source src="assets/images/thesis/stream-breakup.mp4"
+                type="video/mp4" />
+              </video>
+            </div>
+            <figcaption>The liquid metal core breaking up, slowed down. The
+            video comes from a program my supervisor developed to trace the
+            outline of the core and measure its length.</figcaption>
+          </figure>
+
+          <div class="result-main">
+            <div class="findings findings-stack">
+              <div class="finding">
+                <span class="finding-value">12 mm</span>
+                <p>The lower limit. The unbroken metal stream reaches this far,
+                and the plane cannot cut through it.</p>
+              </div>
+              <div class="finding">
+                <span class="finding-value">15–20 mm</span>
+                <p>Where both cases settle into the same trends: speed and
+                temperature from 15 mm, size from 20 mm.</p>
+              </div>
+            </div>
+
+            <p>
+              That gives 20 mm for the cases studied. The more useful result
+              is the general rule: place the plane at the earliest point where
+              droplet size and temperature are falling and speed is rising,
+              and never closer than the length of the unbroken stream.
+            </p>
+
+            <div class="result-highlight">
+              <span class="result-title">What stayed inconclusive</span>
+              <p>
+                Four measures of droplet roundness and the Weber number showed
+                no consistent trend across the two cases, so I did not build
+                the recommendation on them. The 20 mm figure applies to these
+                two cases, not to gas atomization in general.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section class="story story-last">
+      <div class="story-label"><span>05</span> Skills</div>
+      <div class="story-body">
+        <div class="skill-strip">
+          <span>CFD</span>
+          <span>OpenFOAM</span>
+          <span>Volume-of-Fluid</span>
+          <span>Statistical Data Analysis</span>
+          <span>Thermo-Fluids</span>
+          <span>Technical Writing</span>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="project-footer-nav">
+    <a href="experience.html">← Experience</a>
+    </div>
+
+  </div>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <span data-year>2026</span> Ishaan Fartyal, Eindhoven</span>
+      <span class="motto"><svg class="gear" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.20,12.00 L18.14,12.85 L19.84,13.60 L19.28,15.32 L17.47,14.92 L17.02,15.64 L17.02,15.64 L16.47,16.30 L17.40,17.90 L15.94,18.96 L14.71,17.58 L13.92,17.90 L13.92,17.90 L13.09,18.10 L12.90,19.95 L11.10,19.95 L10.91,18.10 L10.08,17.90 L10.08,17.90 L9.29,17.58 L8.06,18.96 L6.60,17.90 L7.53,16.30 L6.98,15.64 L6.98,15.64 L6.53,14.92 L4.72,15.32 L4.16,13.60 L5.86,12.85 L5.80,12.00 L5.80,12.00 L5.86,11.15 L4.16,10.40 L4.72,8.68 L6.53,9.08 L6.98,8.36 L6.98,8.36 L7.53,7.70 L6.60,6.10 L8.06,5.04 L9.29,6.42 L10.08,6.10 L10.08,6.10 L10.91,5.90 L11.10,4.05 L12.90,4.05 L13.09,5.90 L13.92,6.10 L13.92,6.10 L14.71,6.42 L15.94,5.04 L17.40,6.10 L16.47,7.70 L17.02,8.36 L17.02,8.36 L17.47,9.08 L19.28,8.68 L19.84,10.40 L18.14,11.15 L18.20,12.00Z"/><circle cx="12" cy="12" r="2.6"/></svg></span>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

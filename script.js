@@ -1,104 +1,90 @@
-/*
-  Ishaan Fartyal Portfolio
-  Shared script for the homepage and individual project pages.
-*/
+/* Ishaan Fartyal */
+(function () {
+  var root = document.documentElement;
 
-document.addEventListener("DOMContentLoaded", () => {
-  // ------------------------------------------------------------
-  // 1. Smooth scrolling for same-page anchor links
-  // ------------------------------------------------------------
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener("click", (event) => {
-      const targetId = link.getAttribute("href");
+  /* ---------- light / dark ---------- */
+  function setTheme(t) {
+    root.dataset.theme = t;
+    try { localStorage.setItem("theme", t); } catch (e) {}
+    document.querySelectorAll(".theme-toggle").forEach(function (b) {
+      b.setAttribute("aria-label", t === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    });
+  }
+  document.querySelectorAll(".theme-toggle").forEach(function (b) {
+    b.addEventListener("click", function () { setTheme(root.dataset.theme === "dark" ? "light" : "dark"); });
+  });
+  setTheme(root.dataset.theme || "dark");
 
-      if (!targetId || targetId === "#") return;
+  /* ---------- footer year ---------- */
+  document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 
-      const target = document.querySelector(targetId);
-      if (!target) return;
-
-      event.preventDefault();
-
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+  /* ---------- projects: rows that open in place, with slides ---------- */
+  document.querySelectorAll(".proj").forEach(function (p) {
+    var head = p.querySelector(".proj-head"),
+        slides = p.querySelectorAll(".slide"),
+        n = slides.length, cur = 0;
+    function go(i) {
+      cur = (i + n) % n;
+      p.querySelectorAll("[data-i]").forEach(function (el) {
+        var on = +el.dataset.i === cur;
+        if (el.tagName === "BUTTON") el.setAttribute("aria-current", on ? "true" : "false");
+        else el.classList.toggle("on", on);
       });
+      var c = p.querySelector(".ci"); if (c) c.textContent = cur + 1;
+    }
+    function open(state) {
+      p.classList.toggle("open", state);
+      head.setAttribute("aria-expanded", state ? "true" : "false");
+    }
+    head.addEventListener("click", function () {
+      var willOpen = !p.classList.contains("open");
+      document.querySelectorAll(".proj.open").forEach(function (o) {
+        o.classList.remove("open"); o.querySelector(".proj-head").setAttribute("aria-expanded", "false");
+      });
+      if (willOpen) {
+        open(true); go(0);
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        p.scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" });
+        if (history.replaceState) history.replaceState(null, "", "#" + p.id);
+      }
+    });
+    p.querySelectorAll(".slide-nav [data-i]").forEach(function (b) { b.addEventListener("click", function () { go(+b.dataset.i); }); });
+    var prev = p.querySelector(".prev"), next = p.querySelector(".next");
+    if (prev) prev.addEventListener("click", function () { go(cur - 1); });
+    if (next) next.addEventListener("click", function () { go(cur + 1); });
+    p.addEventListener("keydown", function (e) {
+      if (!p.classList.contains("open") || e.target === head) return;
+      if (e.key === "ArrowRight") go(cur + 1);
+      if (e.key === "ArrowLeft") go(cur - 1);
     });
   });
-
-  // ------------------------------------------------------------
-  // 2. Highlight the active homepage navigation section
-  // ------------------------------------------------------------
-  const navLinks = [...document.querySelectorAll(".nav a[href^='#']")];
-  const sections = [...document.querySelectorAll("main section[id]")];
-
-  if (navLinks.length && sections.length) {
-    const setActiveLink = (sectionId) => {
-      navLinks.forEach((link) => {
-        const isActive = link.getAttribute("href") === `#${sectionId}`;
-        link.classList.toggle("active", isActive);
-      });
-    };
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleEntries = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-
-        if (visibleEntries.length) {
-          setActiveLink(visibleEntries[0].target.id);
-        }
-      },
-      {
-        rootMargin: "-35% 0px -55% 0px",
-        threshold: [0, 0.1, 0.25, 0.5]
-      }
-    );
-
-    sections.forEach((section) => observer.observe(section));
+  /* open the project named in the address, e.g. projects.html#secom */
+  if (location.hash) {
+    var target = document.querySelector(".proj#" + CSS.escape(location.hash.slice(1)));
+    if (target) target.querySelector(".proj-head").click();
   }
 
-  // ------------------------------------------------------------
-  // 3. Project-page back button
-  //
-  // Add data-back to any link/button:
-  // <a href="../index.html#work" data-back>← Back to selected work</a>
-  //
-  // If the visitor came from your portfolio, it returns them there.
-  // Otherwise it falls back to the href you supplied.
-  // ------------------------------------------------------------
-  document.querySelectorAll("[data-back]").forEach((button) => {
-    button.addEventListener("click", (event) => {
-      const fallback = button.getAttribute("href") || "../index.html#work";
-
-      if (document.referrer && document.referrer.includes(window.location.host)) {
-        event.preventDefault();
-        window.history.back();
-      } else {
-        button.setAttribute("href", fallback);
-      }
-    });
-  });
-
-  // ------------------------------------------------------------
-  // 4. Automatically display the current year
-  //
-  // Example:
-  // <span data-current-year></span>
-  // ------------------------------------------------------------
-  document.querySelectorAll("[data-current-year]").forEach((element) => {
-    element.textContent = new Date().getFullYear();
-  });
-
-  // ------------------------------------------------------------
-  // 5. Add safe attributes to external links
-  // ------------------------------------------------------------
-  document.querySelectorAll('a[href^="http"]').forEach((link) => {
-    const url = new URL(link.href, window.location.href);
-
-    if (url.origin !== window.location.origin) {
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
+  /* ---------- travel map: pins open a small photo card ---------- */
+  document.querySelectorAll(".mapwrap").forEach(function (wrap) {
+    var pop = wrap.querySelector(".popup"); if (!pop) return;
+    function show(pin) {
+      var d = pin.dataset, svg = wrap.querySelector("svg"), r = svg.getBoundingClientRect(),
+          wr = wrap.getBoundingClientRect(), vb = svg.viewBox.baseVal,
+          x = r.left - wr.left + (+d.x) * r.width / vb.width, y = r.top - wr.top + (+d.y) * r.height / vb.height;
+      pop.querySelector(".t span").textContent = d.place;
+      pop.querySelector(".n").textContent = d.note || "";
+      var img = pop.querySelector("img"), ph = pop.querySelector(".ph");
+      if (d.img) { img.src = d.img; img.alt = d.place; img.hidden = false; ph.hidden = true; }
+      else { img.hidden = true; ph.hidden = false; }
+      pop.hidden = false;
+      var left = x + 16; if (left + pop.offsetWidth > wr.width - 8) left = x - pop.offsetWidth - 16;
+      pop.style.left = Math.max(8, left) + "px";
+      pop.style.top = Math.max(8, Math.min(y - 40, wr.height - pop.offsetHeight - 8)) + "px";
     }
+    wrap.querySelectorAll(".pin").forEach(function (pin) {
+      pin.addEventListener("click", function () { show(pin); });
+      pin.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); show(pin); } });
+    });
+    pop.querySelector(".x").addEventListener("click", function () { pop.hidden = true; });
   });
-});
+})();
