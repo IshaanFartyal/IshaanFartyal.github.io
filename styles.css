@@ -1,8 +1,8 @@
 
 :root {
-  --bg: #080b0e;
-  --surface: #0d1115;
-  --surface-2: #11171c;
+  --bg: #131c27;
+  --surface: #182330;
+  --surface-2: #1d2937;
   --text: #edf2f6;
   --muted: #87929d;
   --border: #7d8791;
@@ -52,7 +52,7 @@ main,
   align-items: center;
   gap: 32px;
   padding: 0 max(24px, calc((100vw - var(--max-width)) / 2));
-  background: rgba(8, 11, 14, 0.88);
+  background: rgba(19, 28, 39, 0.88);
   backdrop-filter: blur(14px);
   position: sticky;
   top: 0;
@@ -227,8 +227,10 @@ h1 {
 .cards.four { grid-template-columns: repeat(4, 1fr); }
 .card {
   border: 1px solid var(--border);
-  background: rgba(13, 17, 21, .82);
+  background: rgba(24, 35, 48, .82);
   position: relative;
+  border-radius: 3px;
+  overflow: hidden;
 }
 .capability {
   min-height: 270px;
@@ -313,7 +315,7 @@ h1 {
   padding: 5px 8px;
   font-size: .66rem;
   color: #aab6c0;
-  background: #0b1014;
+  background: #101923;
 }
 
 .contact-grid {
@@ -1786,7 +1788,7 @@ section[id] { scroll-margin-top: 96px; }
 .project-grid .card.project { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
 .project-grid .project img { height: 100%; aspect-ratio: auto; min-height: 220px; border-bottom: 0; border-right: 1px solid var(--border); }
 .project-grid .project-body { padding: 26px 30px; display: flex; flex-direction: column; justify-content: center; }
-.project-grid .project-body p { min-height: 0; max-width: 46em; }
+.project-grid .project-body p { min-height: 0; max-width: none; }
 
 /* header without the CV button */
 .topbar { grid-template-columns: auto 1fr; }
@@ -1802,7 +1804,7 @@ section[id] { scroll-margin-top: 96px; }
 html { font-size: 84%; }
 .section { padding: 16px 0 36px; }
 .section-title { padding: 6px 0 14px; }
-.cards.three.project-grid { gap: 10px; }
+.cards.three.project-grid { gap: 16px; }
 .project-grid .card.project { grid-template-columns: minmax(0, 1fr) minmax(0, 2.8fr); }
 .project-grid .project img { min-height: 0; max-height: 165px; }
 .project-grid .project-body { padding: 14px 24px; }
