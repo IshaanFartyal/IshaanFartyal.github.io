@@ -1780,3 +1780,20 @@ section[id] { scroll-margin-top: 96px; }
   letter-spacing: .04em;
 }
 #skills .tool-list span { text-transform: none; letter-spacing: .02em; font-size: .74rem; }
+
+/* Selected Work: one project per row */
+.cards.three.project-grid { grid-template-columns: 1fr; gap: 18px; }
+.project-grid .card.project { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
+.project-grid .project img { height: 100%; aspect-ratio: auto; min-height: 220px; border-bottom: 0; border-right: 1px solid var(--border); }
+.project-grid .project-body { padding: 26px 30px; display: flex; flex-direction: column; justify-content: center; }
+.project-grid .project-body p { min-height: 0; max-width: 46em; }
+
+/* header without the CV button */
+.topbar { grid-template-columns: auto 1fr; }
+.topbar .nav { justify-self: end; }
+
+@media (max-width: 760px) {
+  .project-grid .card.project { grid-template-columns: 1fr; }
+  .project-grid .project img { min-height: 0; aspect-ratio: 16 / 10; border-right: 0; border-bottom: 1px solid var(--border); }
+  .project-grid .project-body { padding: 20px; }
+}
