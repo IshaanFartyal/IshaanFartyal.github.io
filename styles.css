@@ -463,3 +463,81 @@ button { font: inherit; color: inherit; }
 .proj-thumb .thumbplot { display: block; width: 100%; height: 100%; background: var(--card); }
 .proj-thumb .thumbplot svg { width: 100%; height: 100%; display: block; }
 .proj-thumb .thumbplot .cl { stroke-width: 3; }
+
+/* coursework rows */
+.w-text { max-width: none; }
+.w-split { align-items: center; }
+.w-side .facts { margin-top: 18px; }
+@media (min-width: 961px) { .w-split.swap > :first-child { order: 2; } }
+.proj-body.full .w-list { margin: 0 0 14px; padding-left: 1.15em; }
+.proj-body.full .w-list li { margin: 0 0 8px; padding-left: 2px; }
+.w-gallery .w-fig img { aspect-ratio: 4 / 3; object-fit: cover; }
+.w-gallery .w-fig.contain img { object-fit: contain; background: #fff; }
+.w-fig.contain img { background: #fff; }
+.coursework .slide > img { max-height: 520px; object-fit: contain; }
+.w-show .viewer { display: block; min-height: 0; padding: 12px; }
+.w-show .slide { margin: 0; }
+.w-show .slide img { display: block; width: 100%; height: 400px; object-fit: contain; border-radius: 6px; background: #fff; }
+.w-show.wide .slide img { height: 540px; }
+.w-show .slide figcaption { font-family: "IBM Plex Sans", sans-serif; font-size: 13px; color: var(--muted); margin: 10px 2px 2px; }
+.w-show .slide-nav { margin: 12px 0 0; align-items: center; }
+.w-show .count { margin: 0 6px 0 0; }
+@media (max-width: 760px) { .w-show .slide img, .w-show.wide .slide img { height: 260px; } }
+.tile-img { position: relative; min-height: 290px; }
+.tile-img img { position: absolute; inset: 0; }
+.tile-body .tags { margin-bottom: 18px; }
+@media (max-width: 960px) { .tile-img { height: auto; aspect-ratio: 16 / 10; } }
+
+/* coursework charts (rebuilt from the original data) */
+:root, :root[data-theme="dark"] { --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --raw: rgba(164, 168, 189, .55); }
+:root[data-theme="light"] { --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --raw: rgba(94, 99, 120, .45); }
+.cw-chart .plot-panel { padding-top: 44px; }
+.cw-chart .cl.thin { stroke-width: 1; }
+.cw-chart .pt-ok { fill: var(--s1); opacity: .75; }
+.cw-chart .pt-sat, .cw-chart .pt-out { fill: var(--raw); }
+.cw-chart .lead { stroke: var(--muted); stroke-width: 1; fill: none; }
+.cw-chart .cl.trend { stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 6 5; }
+.cw-chart .err { stroke: var(--text); stroke-width: 1.2; fill: none; opacity: .7; }
+.cw-chart .cbar:hover, .cw-chart .dot:hover { opacity: .8; }
+.cw-chart .plot-legend i.sq { width: 11px; height: 11px; border-radius: 3px; }
+.cw-chart .plot-tip { white-space: nowrap; min-width: 0; }
+.cw-chart .plot-table { margin-top: 10px; }
+.w-show .slide .cw-chart { margin: 0; }
+.w-show .slide .cw-chart svg { height: 330px; }
+.w-show.wide .slide .cw-chart svg { height: 470px; }
+.coursework .slide .cw-chart svg { max-height: 440px; }
+.coursework .viewer .cw-chart { width: 100%; }
+@media (max-width: 760px) {
+  .cw-chart .plot-scroll svg { min-width: 560px; height: auto !important; }
+  .w-show .slide .cw-chart svg { height: auto; }
+}
+
+/* coursework diagrams */
+.cw-diagram .plot-panel { padding-top: 40px; }
+.cw-diagram svg { height: auto; }
+.cw-diagram .dg-yoke { fill: var(--dg-yoke); stroke: var(--text); stroke-width: 1.2; }
+.cw-diagram .dg-air { fill: var(--bg); stroke: var(--text); stroke-width: 1.2; }
+.cw-diagram .dg-mag { fill: var(--s4); stroke: var(--text); stroke-width: 1.2; }
+.cw-diagram .dg-coil { fill: var(--s1); stroke: var(--text); stroke-width: 1.2; }
+.cw-diagram .dg-axis { stroke: var(--muted); stroke-width: 1; stroke-dasharray: 6 5; }
+.cw-diagram .dg-lead { stroke: var(--muted); stroke-width: 1; fill: none; }
+.cw-diagram .dg-travel { stroke: var(--text); stroke-width: 1.5; fill: none; }
+.cw-diagram .dg-head { fill: var(--muted); }
+.cw-diagram .dg-ehead { fill: var(--s1); }
+.cw-diagram .dg-t { fill: var(--text); font: 500 13.5px "IBM Plex Sans", sans-serif; }
+.cw-diagram .dg-big { font-size: 17px; }
+.cw-diagram .dg-small { fill: var(--muted); font: 11.5px "IBM Plex Sans", sans-serif; }
+.cw-diagram .dg-cap { fill: var(--muted); font: 600 11px "IBM Plex Sans", sans-serif; letter-spacing: .12em; }
+.cw-diagram .dg-pinlab { fill: var(--text); font: 600 11.5px "IBM Plex Mono", ui-monospace, monospace; }
+.cw-diagram .dg-box { fill: var(--panel); stroke: var(--axis); stroke-width: 1.2; }
+.cw-diagram .dg-mine { stroke: var(--lamp); stroke-width: 2; }
+.cw-diagram .dg-grid { stroke-dasharray: 5 4; }
+.cw-diagram .dg-board { fill: var(--dg-board); stroke: var(--axis); stroke-width: 1.2; }
+.cw-diagram .dg-pin { fill: var(--lamp); }
+.cw-diagram .dg-wire { stroke: var(--s3); stroke-width: 2; fill: none; }
+.cw-diagram .dg-energy { stroke: var(--s1); stroke-width: 3.5; fill: none; }
+.cw-diagram .dg-signal { stroke: var(--muted); stroke-width: 1.2; fill: none; }
+#dg-caes-model .dg-t { font-size: 17px; }
+#dg-caes-model .dg-small { font-size: 13.5px; }
+:root, :root[data-theme="dark"] { --dg-yoke: #4a5068; --dg-board: rgba(57, 135, 229, .12); }
+:root[data-theme="light"] { --dg-yoke: #9aa0b0; --dg-board: rgba(42, 120, 214, .08); }

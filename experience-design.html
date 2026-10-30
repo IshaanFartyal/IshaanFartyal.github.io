@@ -56,27 +56,24 @@
       <a class="back" href="experience.html">← Experience</a>
       <div class="page-head">
         <h1>Mechanical design and simulation</h1>
-        <p><span class="todo">[One line in your words.]</span></p>
+        <p>University projects where I designed something, simulated it, and in most cases built it.</p>
       </div>
-      <div class="list">
-      <article class="proj" id="printer">
+      <div class="list coursework">
+      <article class="proj" id="billiard-cue">
         <button class="proj-head" type="button" aria-expanded="false"
-        aria-controls="printer-body">
-          <span class="proj-thumb"><div class="ph">[photo]</div></span>
+        aria-controls="billiard-cue-body">
+          <span class="proj-thumb">
+          <img src="assets/images/coursework/cue/femm.webp"
+          alt="FEMM simulation of the voice coil actuator" loading="lazy" />
+          </span>
           <span class="proj-text">
             <span class="proj-when">
-            <span>
-            <span class="todo">[dates]</span>
+            <span>Feb – Apr 2025</span>
+            <span>Mechatronic Design (4CC10)</span>
             </span>
-            <span>
-            <span class="todo">[course title]</span>
-            </span>
-            </span>
-            <span class="proj-title">Printer mechanism design</span>
-            <span class="proj-line">
-            <span class="todo">[One line in your words.]</span>
-            </span>
-            <span class="tags"><span>Siemens NX</span></span>
+            <span class="proj-title">Magnetics for an automatic billiard cue</span>
+            <span class="proj-line">Designing and simulating the voice coil actuator that takes the shot.</span>
+            <span class="tags"><span>FEMM</span><span>MATLAB</span><span>Magnetics</span></span>
           </span>
           <span class="proj-toggle" aria-hidden="true">
           <span class="when-closed">Show</span>
@@ -85,45 +82,173 @@
           </i>
           </span>
         </button>
-        <div class="proj-body full" id="printer-body">
+        <div class="proj-body" id="billiard-cue-body">
+          <div class="viewer">
+            <div class="slide on" data-i="0">
+            <img src="assets/images/coursework/cue/femm.webp" alt="FEMM simulation of the voice coil actuator, showing flux lines through the yoke" loading="lazy">
+            </div>
+            <div class="slide" data-i="1">
+            <figure class="plot cw-chart cw-diagram" id="dg-vc-section">
+          <div class="plot-panel">
+            <span class="visual-label">Voice coil actuator · cross-section</span>
+            <svg viewBox="0 0 520 420" role="img" aria-labelledby="vc-section-t vc-section-d">
+              <title id="vc-section-t">Cross-section of the voice coil actuator</title>
+              <desc id="vc-section-d">A steel yoke with a centre pole, two bonded NdFeB magnets on the inner walls and the coil sitting in the gap between magnet and pole.</desc>
+              <defs><marker id="vc-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="dg-head"/></marker><marker id="vc-e" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="dg-ehead"/></marker></defs><rect x="30.0" y="34.0" width="369.6" height="305.2" class="dg-yoke"/><rect x="80.4" y="214.3" width="120.4" height="59.4" class="dg-air"/><rect x="230.5" y="214.3" width="121.5" height="59.4" class="dg-air"/><rect x="200.8" y="34.0" width="29.7" height="180.3" class="dg-yoke"/><rect x="102.8" y="34.0" width="71.7" height="180.3" class="dg-mag"/><rect x="258.5" y="34.0" width="69.4" height="180.3" class="dg-mag"/><rect x="181.2" y="34.0" width="14.0" height="180.3" class="dg-coil"/><rect x="237.2" y="34.0" width="14.0" height="180.3" class="dg-coil"/><line x1="215.6" y1="20" x2="215.6" y2="353.2" class="dg-axis"/><path d="M187.9,28 V8" class="dg-travel" marker-end="url(#vc-a)" marker-start="url(#vc-a)"/><text x="179.9" y="22" class="dg-small" text-anchor="end">coil moves</text><path d="M243.9,84.4 L413.6,56.0" class="dg-lead"/><circle cx="243.9" cy="84.4" r="2.5" class="dg-head"/><text x="421.6" y="60.0" class="dg-t">Coil</text><text x="421.6" y="76.0" class="dg-small">100 turns at 1 A</text><path d="M327.9,123.6 L413.6,136.0" class="dg-lead"/><circle cx="327.9" cy="123.6" r="2.5" class="dg-head"/><text x="421.6" y="140.0" class="dg-t">Magnet</text><text x="421.6" y="156.0" class="dg-small">Bonded NdFeB</text><path d="M377.2,202.0 L413.6,216.0" class="dg-lead"/><circle cx="377.2" cy="202.0" r="2.5" class="dg-head"/><text x="421.6" y="220.0" class="dg-t">Steel yoke</text><text x="421.6" y="236.0" class="dg-small">1018 steel</text><path d="M215.4,162.8 L413.6,296.0" class="dg-lead"/><circle cx="215.4" cy="162.8" r="2.5" class="dg-head"/><text x="421.6" y="300.0" class="dg-t">Centre pole</text><text x="421.6" y="316.0" class="dg-small">Part of the yoke</text><text x="215.6" y="371.2" class="dg-small" text-anchor="middle">Section through the actuator, axis of symmetry dashed</text>
+            </svg>
+          </div>
+          </figure>
+            </div>
+            <div class="slide" data-i="2">
+            <figure class="plot cw-chart" id="chart-cue-flux-sm">
+          <div class="plot-panel">
+            <span class="visual-label">Flux density along the coil (FEMM)</span>
+            
+            <div class="plot-scroll">
+            <svg viewBox="0 0 480 380" role="img" aria-labelledby="cue-flux-sm-t cue-flux-sm-d" data-hover='{"x":[0.0,0.028,0.057,0.085,0.113,0.142,0.17,0.198,0.227,0.255,0.284,0.312,0.34,0.369,0.397,0.425,0.454,0.482,0.51,0.539,0.567,0.595,0.624,0.652,0.68,0.709,0.737,0.766,0.794,0.822,0.851,0.879,0.907,0.936,0.964,0.992,1.021,1.049,1.077,1.106,1.134,1.162,1.191,1.219,1.247,1.276,1.304,1.333,1.361,1.389,1.418,1.446,1.474,1.503,1.531,1.559,1.588,1.616,1.644,1.673,1.701,1.729,1.758,1.786,1.815,1.843,1.871,1.9,1.928,1.956,1.985,2.013,2.041,2.07,2.098,2.126,2.155,2.183,2.211,2.24,2.268,2.297,2.325,2.353,2.382,2.41,2.438,2.467,2.495,2.523,2.552,2.58,2.608,2.637,2.665,2.693,2.722,2.75,2.779,2.807,2.835,2.864,2.892,2.92,2.949,2.977,3.005,3.034,3.062,3.09,3.119,3.147,3.175,3.204,3.232,3.261,3.289,3.317,3.346,3.374,3.402,3.431,3.459,3.487,3.516,3.544,3.572,3.601,3.629,3.657,3.686,3.714,3.742,3.771,3.799,3.828,3.856,3.884,3.913,3.941,3.969,3.998,4.026,4.054,4.083,4.111,4.139,4.168,4.196,4.224],"y":[0.0647,0.0674,0.0697,0.0718,0.074,0.0764,0.0787,0.0807,0.0825,0.0845,0.0864,0.088,0.0894,0.0906,0.0919,0.0934,0.0941,0.0949,0.0957,0.0967,0.0977,0.0985,0.0988,0.0991,0.0993,0.0996,0.0998,0.1001,0.1003,0.1005,0.1007,0.1004,0.1002,0.1,0.1,0.0999,0.0995,0.0989,0.0985,0.0981,0.0979,0.0978,0.0979,0.0979,0.0978,0.0974,0.097,0.0967,0.0963,0.096,0.0958,0.0955,0.0956,0.0957,0.0957,0.0954,0.0951,0.0946,0.0943,0.0946,0.0949,0.0952,0.095,0.0944,0.0939,0.0933,0.093,0.0929,0.0931,0.0933,0.0935,0.0937,0.0934,0.0926,0.0917,0.0909,0.0902,0.0898,0.0899,0.09,0.09,0.09,0.0899,0.0893,0.0888,0.0883,0.0876,0.087,0.0866,0.0863,0.0852,0.0838,0.0824,0.0812,0.0798,0.0788,0.078,0.0771,0.0762,0.0748,0.0734,0.0721,0.0709,0.069,0.067,0.0652,0.0633,0.0612,0.0585,0.0563,0.0542,0.0522,0.0501,0.0481,0.0459,0.0438,0.0417,0.0396,0.038,0.0367,0.0355,0.0338,0.0318,0.0303,0.0288,0.0274,0.026,0.0248,0.0237,0.0224,0.0211,0.02,0.0191,0.0182,0.0173,0.0165,0.0158,0.015,0.0142,0.0136,0.0129,0.0123,0.0119,0.0114,0.0109,0.0105,0.0101,0.0097,0.0094,0.0091],"xl":"Along coil","yl":"|B|","xu":"cm","yu":"T","l":64,"pw":392,"t":16,"ph":312,"x0":0,"x1":4.5,"y0":0,"y1":0.12,"c":"var(--s1)"}'>
+              <title id="cue-flux-sm-t">Magnetic flux density along the coil</title>
+              <desc id="cue-flux-sm-d">Flux density rises from about 0.065 T, peaks at 0.101 T around 0.8 cm, then falls off towards the end of the coil.</desc>
+              <line x1="64" y1="328.0" x2="456" y2="328.0" class="cg"/><text x="54" y="332.0" class="ct" text-anchor="end">0.00</text><line x1="64" y1="250.0" x2="456" y2="250.0" class="cg"/><text x="54" y="254.0" class="ct" text-anchor="end">0.03</text><line x1="64" y1="172.0" x2="456" y2="172.0" class="cg"/><text x="54" y="176.0" class="ct" text-anchor="end">0.06</text><line x1="64" y1="94.0" x2="456" y2="94.0" class="cg"/><text x="54" y="98.0" class="ct" text-anchor="end">0.09</text><line x1="64" y1="16.0" x2="456" y2="16.0" class="cg"/><text x="54" y="20.0" class="ct" text-anchor="end">0.12</text><line x1="64.0" y1="16" x2="64.0" y2="328" class="cg"/><text x="64.0" y="348" class="ct" text-anchor="middle">0</text><line x1="151.1" y1="16" x2="151.1" y2="328" class="cg"/><text x="151.1" y="348" class="ct" text-anchor="middle">1</text><line x1="238.2" y1="16" x2="238.2" y2="328" class="cg"/><text x="238.2" y="348" class="ct" text-anchor="middle">2</text><line x1="325.3" y1="16" x2="325.3" y2="328" class="cg"/><text x="325.3" y="348" class="ct" text-anchor="middle">3</text><line x1="412.4" y1="16" x2="412.4" y2="328" class="cg"/><text x="412.4" y="348" class="ct" text-anchor="middle">4</text><line x1="64" y1="328" x2="456" y2="328" class="cx"/><text x="260.0" y="370" class="ct" text-anchor="middle">Distance along the coil (cm)</text><text x="16" y="172.0" class="ct" text-anchor="middle" transform="rotate(-90 16 172.0)">Flux density |B| (T)</text><path d="M64.0,159.9 L64.2,159.2 L64.5,158.5 L64.7,157.7 L65.0,157.0 L65.2,156.3 L65.5,155.6 L65.7,154.9 L66.0,154.2 L66.2,153.5 L66.5,152.9 L66.7,152.3 L67.0,151.6 L67.2,151.0 L67.5,150.4 L67.7,149.8 L68.0,149.1 L68.2,148.5 L68.7,147.4 L69.2,146.3 L69.7,145.2 L69.9,144.7 L70.2,144.1 L70.4,143.6 L70.7,143.0 L70.9,142.4 L71.2,141.9 L71.4,141.3 L71.7,140.8 L71.9,140.2 L72.2,139.6 L72.4,139.1 L72.6,138.5 L72.9,137.9 L73.1,137.4 L73.4,136.8 L73.6,136.2 L73.9,135.5 L74.1,134.9 L74.4,134.3 L74.6,133.6 L74.9,133.0 L75.1,132.4 L75.4,131.8 L75.6,131.2 L75.9,130.6 L76.1,130.0 L76.3,129.4 L76.6,128.8 L76.8,128.2 L77.1,127.6 L77.3,127.0 L77.6,126.4 L77.8,125.8 L78.1,125.1 L78.3,124.5 L78.6,123.9 L78.8,123.3 L79.1,122.7 L79.3,122.1 L79.6,121.5 L80.1,120.6 L80.5,119.7 L81.0,118.7 L81.5,117.8 L82.0,116.8 L82.5,115.8 L83.0,114.9 L83.5,113.9 L84.0,112.9 L84.5,111.9 L85.0,110.9 L85.5,109.9 L86.0,108.9 L86.5,107.9 L87.0,106.9 L87.5,105.9 L88.0,104.9 L88.5,103.9 L88.9,103.0 L89.4,102.1 L89.9,101.2 L90.4,100.3 L90.9,99.4 L91.4,98.7 L91.9,98.0 L92.4,97.2 L92.9,96.5 L93.4,95.9 L93.9,95.3 L94.4,94.6 L94.9,94.0 L95.4,93.4 L95.9,92.8 L96.4,92.1 L96.8,91.5 L97.3,90.9 L97.8,90.2 L98.3,89.4 L98.8,88.7 L99.3,87.9 L99.8,87.2 L100.3,86.4 L100.8,85.6 L101.3,85.0 L101.8,84.6 L102.3,84.2 L102.8,83.9 L103.3,83.5 L103.8,83.1 L104.3,82.7 L104.8,82.3 L105.2,82.0 L105.7,81.6 L106.2,81.2 L106.7,80.8 L107.2,80.4 L107.7,79.9 L108.2,79.4 L108.7,78.9 L109.2,78.4 L109.7,77.9 L110.2,77.4 L110.7,76.8 L111.2,76.3 L111.7,75.8 L112.2,75.3 L112.7,74.8 L113.1,74.2 L113.6,73.7 L114.1,73.2 L114.6,72.7 L115.1,72.1 L115.9,71.9 L116.6,71.7 L117.3,71.5 L118.1,71.3 L118.8,71.0 L119.6,70.8 L120.3,70.6 L121.1,70.4 L121.8,70.2 L122.5,69.9 L123.3,69.7 L124.0,69.5 L124.8,69.3 L125.5,69.1 L126.2,68.9 L127.0,68.8 L127.7,68.6 L128.5,68.4 L129.2,68.2 L129.9,68.0 L130.7,67.9 L131.4,67.7 L132.2,67.5 L132.9,67.3 L133.6,67.1 L134.4,66.9 L135.1,66.7 L135.9,66.6 L136.6,66.4 L137.4,66.2 L138.1,66.3 L138.8,66.5 L139.6,66.7 L140.3,66.8 L141.1,67.0 L141.8,67.2 L142.5,67.4 L143.3,67.5 L144.0,67.7 L144.8,67.9 L145.5,68.0 L146.5,68.0 L147.5,68.1 L148.5,68.1 L149.5,68.2 L150.2,68.3 L150.9,68.4 L151.7,68.6 L152.4,69.1 L153.2,69.5 L153.9,69.9 L154.6,70.4 L155.4,70.8 L156.1,71.2 L156.9,71.5 L157.6,71.8 L158.3,72.1 L159.1,72.4 L159.8,72.7 L160.6,73.0 L161.3,73.2 L162.1,73.3 L162.8,73.4 L163.5,73.5 L164.3,73.6 L165.3,73.6 L166.2,73.6 L167.2,73.5 L168.2,73.5 L169.2,73.4 L170.2,73.4 L171.2,73.3 L171.9,73.4 L172.7,73.7 L173.4,74.0 L174.2,74.3 L174.9,74.6 L175.6,75.0 L176.4,75.3 L177.1,75.6 L177.9,75.9 L178.6,76.1 L179.3,76.4 L180.1,76.6 L180.8,76.9 L181.6,77.2 L182.3,77.4 L183.0,77.7 L183.8,77.9 L184.5,78.2 L185.3,78.4 L186.0,78.6 L186.7,78.8 L187.5,79.0 L188.2,79.2 L189.0,79.4 L189.7,79.6 L190.5,79.7 L191.2,79.6 L191.9,79.5 L192.7,79.4 L193.4,79.3 L194.2,79.2 L194.9,79.1 L195.6,79.0 L196.4,78.9 L197.1,79.0 L197.9,79.2 L198.6,79.5 L199.3,79.7 L200.1,80.0 L200.8,80.2 L201.6,80.4 L202.3,80.7 L203.0,81.1 L203.8,81.5 L204.5,82.0 L205.3,82.4 L206.0,82.8 L206.8,83.0 L207.5,82.8 L208.2,82.5 L209.0,82.3 L209.7,82.1 L210.5,81.8 L211.2,81.6 L211.9,81.3 L212.7,81.1 L213.4,80.8 L214.2,80.6 L214.9,80.3 L215.6,80.1 L216.1,80.4 L216.9,80.9 L217.6,81.3 L218.4,81.8 L219.1,82.2 L219.8,82.6 L220.6,83.1 L221.3,83.5 L222.1,83.9 L222.8,84.4 L223.5,84.8 L224.3,85.2 L225.0,85.6 L225.8,85.9 L226.5,86.1 L227.3,86.2 L228.0,86.4 L228.7,86.5 L229.5,86.4 L230.2,86.2 L231.0,86.1 L231.7,86.0 L232.4,85.8 L233.2,85.7 L233.9,85.6 L234.7,85.4 L235.4,85.3 L236.1,85.1 L236.9,85.0 L237.6,84.9 L238.4,84.7 L239.1,84.6 L239.8,84.4 L240.8,84.5 L241.6,84.9 L242.1,85.4 L242.6,85.8 L243.1,86.2 L243.6,86.7 L244.0,87.1 L244.5,87.6 L245.0,88.0 L245.5,88.4 L246.0,88.9 L246.5,89.3 L247.0,89.8 L247.5,90.2 L248.0,90.6 L248.5,91.0 L249.0,91.4 L249.5,91.8 L250.0,92.2 L250.5,92.6 L251.0,93.0 L251.5,93.4 L252.0,93.8 L252.4,94.2 L252.9,94.5 L253.9,94.5 L254.9,94.4 L255.9,94.4 L256.9,94.3 L257.9,94.2 L258.6,94.2 L259.4,94.1 L260.1,94.0 L260.8,94.0 L261.6,93.9 L262.6,93.9 L263.6,93.9 L264.5,94.0 L265.5,94.0 L266.3,94.1 L267.0,94.6 L267.8,95.0 L268.5,95.4 L269.2,95.9 L270.0,96.3 L270.7,96.7 L271.5,97.1 L272.2,97.5 L272.9,97.9 L273.7,98.3 L274.4,98.7 L275.2,99.1 L275.7,99.5 L276.2,99.9 L276.6,100.3 L277.1,100.7 L277.6,101.1 L278.1,101.5 L278.9,101.9 L279.6,102.2 L280.4,102.5 L281.1,102.7 L281.8,103.0 L282.6,103.3 L283.3,103.5 L284.1,103.8 L284.8,104.2 L285.3,104.9 L285.8,105.7 L286.3,106.5 L286.8,107.2 L287.3,108.0 L287.8,108.7 L288.3,109.5 L288.8,110.2 L289.2,110.9 L289.7,111.6 L290.2,112.4 L290.7,113.1 L291.2,113.8 L291.7,114.5 L292.2,115.2 L292.7,115.9 L293.2,116.4 L293.7,116.9 L294.2,117.3 L294.7,117.9 L295.2,118.8 L295.7,119.6 L296.2,120.4 L296.7,121.1 L297.1,121.6 L297.6,122.1 L298.1,122.5 L298.6,123.0 L299.1,123.5 L299.6,124.0 L300.1,124.4 L300.6,124.9 L301.1,125.3 L301.6,125.8 L302.1,126.2 L302.6,126.6 L303.1,127.1 L303.6,127.5 L304.1,127.9 L304.6,128.3 L305.1,128.8 L305.5,129.3 L306.0,130.0 L306.5,130.7 L307.0,131.4 L307.5,132.2 L308.0,132.9 L308.5,133.6 L309.0,134.3 L309.5,135.0 L310.0,135.7 L310.5,136.4 L311.0,137.1 L311.5,137.8 L312.0,138.5 L312.5,139.2 L313.0,139.8 L313.4,140.5 L313.9,141.2 L314.4,141.8 L314.9,142.5 L315.4,143.1 L315.9,143.8 L316.4,144.5 L316.9,145.5 L317.4,146.6 L317.9,147.6 L318.4,148.6 L318.9,149.6 L319.4,150.7 L319.9,151.7 L320.4,152.7 L320.9,153.7 L321.4,154.7 L321.8,155.7 L322.3,156.6 L322.8,157.6 L323.3,158.6 L323.8,159.5 L324.3,160.5 L324.8,161.4 L325.3,162.4 L325.8,163.3 L326.3,164.1 L326.8,164.9 L327.3,165.7 L327.5,166.4 L327.8,167.3 L328.0,168.2 L328.3,169.0 L328.5,169.7 L328.8,170.4 L329.0,171.2 L329.3,171.9 L329.5,172.6 L329.7,173.3 L330.0,174.0 L330.2,174.7 L330.5,175.3 L330.7,175.8 L331.0,176.4 L331.2,177.0 L331.5,177.6 L331.7,178.1 L332.0,178.7 L332.2,179.3 L332.5,179.8 L332.7,180.4 L333.0,181.0 L333.2,181.5 L333.5,182.1 L333.7,182.7 L333.9,183.2 L334.2,183.8 L334.4,184.3 L334.9,185.4 L335.4,186.5 L335.9,187.6 L336.4,188.7 L336.9,189.7 L337.4,190.8 L337.9,191.9 L338.4,192.9 L338.9,193.9 L339.4,195.0 L339.9,196.1 L340.4,197.1 L340.9,198.2 L341.4,199.3 L341.9,200.3 L342.3,201.4 L342.8,202.5 L343.3,203.5 L343.8,204.6 L344.1,205.2 L344.3,205.8 L344.6,206.3 L344.8,206.9 L345.1,207.4 L345.3,208.0 L345.6,208.6 L345.8,209.1 L346.1,209.7 L346.3,210.2 L346.5,210.8 L346.8,211.3 L347.0,211.9 L347.3,212.5 L347.5,213.0 L347.8,213.6 L348.3,214.7 L348.8,215.8 L349.3,216.9 L349.8,218.0 L350.2,219.1 L350.7,220.1 L351.2,221.2 L351.7,222.3 L352.2,223.4 L352.7,224.4 L353.2,225.5 L353.7,226.6 L354.2,227.4 L354.7,228.1 L355.2,228.8 L355.7,229.5 L356.2,230.1 L356.7,230.8 L357.2,231.5 L357.7,232.1 L358.2,232.8 L358.6,233.5 L359.1,234.1 L359.6,234.8 L360.1,235.4 L360.6,236.1 L361.1,236.7 L361.6,237.5 L362.1,238.6 L362.6,239.6 L363.1,240.7 L363.6,241.8 L364.1,242.9 L364.6,243.9 L365.1,244.9 L365.6,245.7 L366.1,246.5 L366.5,247.3 L367.0,248.1 L367.5,248.9 L368.0,249.6 L368.5,250.4 L369.0,251.2 L369.5,252.0 L370.0,252.7 L370.5,253.5 L371.0,254.2 L371.5,255.0 L372.0,255.7 L372.5,256.5 L373.0,257.2 L373.5,257.9 L374.0,258.7 L374.5,259.4 L374.9,260.1 L375.4,260.7 L375.9,261.3 L376.4,261.9 L376.9,262.5 L377.4,263.1 L377.9,263.7 L378.4,264.3 L378.9,264.9 L379.4,265.5 L379.9,266.1 L380.4,266.7 L380.9,267.4 L381.4,268.1 L381.9,268.8 L382.4,269.5 L382.9,270.2 L383.3,270.8 L383.8,271.5 L384.3,272.2 L384.8,272.8 L385.3,273.4 L385.8,274.1 L386.3,274.7 L386.8,275.2 L387.3,275.7 L387.8,276.1 L388.3,276.6 L388.8,277.1 L389.3,277.5 L389.8,278.0 L390.3,278.5 L390.8,279.0 L391.2,279.4 L391.7,279.9 L392.2,280.4 L392.7,280.8 L393.2,281.3 L393.7,281.8 L394.2,282.3 L394.7,282.7 L395.2,283.2 L395.7,283.6 L396.2,284.0 L396.7,284.4 L397.2,284.8 L397.7,285.2 L398.2,285.6 L398.7,286.0 L399.2,286.4 L399.6,286.8 L400.1,287.2 L400.6,287.6 L401.1,288.0 L401.6,288.4 L402.1,288.9 L402.6,289.3 L403.1,289.7 L403.6,290.1 L404.1,290.5 L404.6,290.9 L405.1,291.2 L405.6,291.5 L406.1,291.9 L406.6,292.2 L407.1,292.5 L407.5,292.9 L408.0,293.2 L408.5,293.5 L409.0,293.9 L409.5,294.2 L410.0,294.5 L410.5,294.9 L411.0,295.2 L411.5,295.5 L412.2,295.9 L413.0,296.3 L413.7,296.7 L414.5,297.0 L415.2,297.4 L415.9,297.8 L416.7,298.2 L417.4,298.6 L418.2,298.9 L418.9,299.2 L419.7,299.6 L420.4,299.9 L421.1,300.2 L421.9,300.6 L422.6,300.9 L423.4,301.3 L424.1,301.6 L424.8,301.9 L425.6,302.2 L426.3,302.5 L427.1,302.7 L427.8,303.0 L428.5,303.2 L429.3,303.5 L430.0,303.7 L430.8,304.0 L431.5,304.2 L432.2,304.4 L433.0,304.6 L433.7,304.9 L434.2,305.0" class="cl" style="stroke:var(--s1)"/><circle cx="137.6" cy="66.2" r="5" class="mk" style="fill:var(--s1)"/><text x="147.6" y="54.2" class="cd">Peak 0.101 T</text>
+            </svg>
+            </div>
+            <div class="plot-tip" hidden></div>
+          </div>
+          </figure>
+            </div>
+          </div>
+          <div class="side">
+            <div class="count"><span class="ci">1</span> / 3</div>
+            <div class="say on" data-i="0">
+            <h3>My part: the actuator</h3>
+            <p>Our group of six designed a small robot that sits on a billiard table, aims and takes the shot by itself. Each of us had a named role. Mine was Magnetics Designer: I was responsible for the actuator that hits the ball.</p>
+            </div>
+            <div class="say" data-i="1">
+            <h3>The design</h3>
+            <p>We picked a voice coil over pneumatic and spring actuators, mostly for its size, mass and simplicity. I designed it with a 1018 steel yoke, a bonded NdFeB magnet (much cheaper than sintered and strong enough) and a 100-turn coil running at 1&nbsp;A.</p>
+            </div>
+            <div class="say" data-i="2">
+            <h3>What the simulation gave</h3>
+            <p>I simulated it in FEMM over several versions and used MATLAB to pull the flux along the coil. From that I worked out the force, inductance, resistance and current density, and checked them against similar actuators from Thorlabs and Moticont. Closing the air gap took the force from 0.8 to 1.05&nbsp;N per amp.</p>
+            </div>
+            <div class="slide-nav">
+            <button type="button" data-i="0" aria-current="true"
+            aria-label="Show 1 of 3">1</button>
+            <button type="button" data-i="1" aria-current="false"
+            aria-label="Show 2 of 3">2</button>
+            <button type="button" data-i="2" aria-current="false"
+            aria-label="Show 3 of 3">3</button>
+            <button type="button" class="prev" aria-label="Previous">←</button>
+            <button type="button" class="next" aria-label="Next">→</button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article class="proj" id="canon-carriage">
+        <button class="proj-head" type="button" aria-expanded="false"
+        aria-controls="canon-carriage-body">
+          <span class="proj-thumb">
+          <img src="assets/images/coursework/canon/assembly.webp"
+          alt="The modified printer carriage in Siemens NX" loading="lazy" />
+          </span>
+          <span class="proj-text">
+            <span class="proj-when">
+            <span>Sep – Oct 2024</span>
+            <span>Computer-Aided Engineering (4GC00)</span>
+            </span>
+            <span class="proj-title">Stiffening a Canon printer carriage</span>
+            <span class="proj-line">Pushing the vibration modes of a production printer's carriage away from the machine's own vibrations.</span>
+            <span class="tags"><span>Siemens NX</span><span>FEM</span><span>Modal Analysis</span><span>Sheet Metal</span></span>
+          </span>
+          <span class="proj-toggle" aria-hidden="true">
+          <span class="when-closed">Show</span>
+          <span class="when-open">Close</span>
+          <i>
+          </i>
+          </span>
+        </button>
+        <div class="proj-body full" id="canon-carriage-body">
           <div class="w-text">
-          <p class="todo">[A paragraph or two in your words: the project, your
-          part in it, and how it turned out.]</p>
+            <h3>Keeping a print head steady</h3>
+            <p>The carriage on Canon's Colorado 1650 holds the print heads, and it has to drop ink to within
+            20&nbsp;µm while the printer around it vibrates at about 50&nbsp;Hz. Our group of six was asked to
+            stiffen it so its natural frequencies sat well clear of that, while adding no more than 1.5&nbsp;kg.</p>
+          </div>
+          <div class="w-split">
+            <div>
+              <h3>My contribution</h3>
+              <ul class="w-list">
+                <li>Worked out, with a teammate, how to get the natural frequencies out of NX: a modal analysis followed by a frequency response run.</li>
+                <li>Designed three of the stiffening parts: a front part running along the carriage, a mid-side reinforcement and a new backplate. All are 1.5&nbsp;mm steel sheet bolted to the side plates; I meshed each one and connected it into the model.</li>
+                <li>Put the final assembly together with a teammate, combining everyone's parts into one model and getting the connections to actually hold. A lot of my time went into solver and meshing errors, and fixing them taught me more about how NX builds a model than any tutorial did.</li>
+                <li>Wrote the FE validation part of the report: why we used 2D shell meshes over 3D for sheet metal, and how we modelled the bolted joints.</li>
+              </ul>
+            </div>
+            <div class="w-side">
+            <figure class="w-fig">
+            <img src="assets/images/coursework/canon/backplate.webp"
+            alt="The backplate, shown in blue, bolted to the carriage side plates" loading="lazy" />
+            <figcaption>The backplate I designed (blue), bolted to the side plates.</figcaption>
+            </figure>
+              <dl class="facts">
+                <dt>Client</dt><dd>Canon Production Printing</dd>
+                <dt>Team</dt><dd>Six students</dd>
+                <dt>Tools</dt><dd>Siemens NX, Nastran</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="findings findings-three">
+            <div class="finding">
+            <span class="finding-value">11.5 → 68.2 <small>Hz</small></span>
+            <p>The seventh mode, before and after our changes.</p>
+            </div>
+            <div class="finding">
+            <span class="finding-value">0.86 <small>kg</small></span>
+            <p>Mass added, against a limit of 1.5&nbsp;kg.</p>
+            </div>
+            <div class="finding">
+            <span class="finding-value">1 peak</span>
+            <p>Still sat below the 75&nbsp;Hz target in the frequency response.</p>
+            </div>
+          </div>
+          <div class="w-text">
+            <h3>How it turned out</h3>
+            <p>A big improvement, but not a full pass: one peak in the frequency response stayed below 75&nbsp;Hz.
+            The design stayed cheap and simple to make, using bent sheet metal and bolts.</p>
           </div>
           <div class="w-gallery">
             <figure class="w-fig">
-            <div class="ph">[project outcome]</div>
-            <figcaption>[caption]</figcaption>
+            <img src="assets/images/coursework/canon/exploded.webp"
+            alt="Exploded view of the carriage with the added parts numbered" loading="lazy" />
+            <figcaption>The parts our group added, numbered.</figcaption>
             </figure>
             <figure class="w-fig">
-            <div class="ph">[model or prototype]</div>
-            <figcaption>[caption]</figcaption>
+            <img src="assets/images/coursework/canon/mode7-before.webp"
+            alt="Seventh vibration mode of the original carriage at 11.5 Hz" loading="lazy" />
+            <figcaption>Mode 7 of the original carriage: 11.5&nbsp;Hz.</figcaption>
             </figure>
             <figure class="w-fig">
-            <div class="ph">[photo with the team]</div>
-            <figcaption>[caption]</figcaption>
+            <img src="assets/images/coursework/canon/mode7-after.webp"
+            alt="Seventh vibration mode of the final design at 68.2 Hz" loading="lazy" />
+            <figcaption>Mode 7 of our final design: 68.2&nbsp;Hz.</figcaption>
             </figure>
           </div>
         </div>
       </article>
-      <article class="proj" id="magnetic">
+      <article class="proj" id="launcher">
         <button class="proj-head" type="button" aria-expanded="false"
-        aria-controls="magnetic-body">
-          <span class="proj-thumb"><div class="ph">[photo]</div></span>
+        aria-controls="launcher-body">
+          <span class="proj-thumb">
+          <img src="assets/images/coursework/launcher/build.webp"
+          alt="The printed launching mechanism on the test table" loading="lazy" />
+          </span>
           <span class="proj-text">
             <span class="proj-when">
-            <span>
-            <span class="todo">[dates]</span>
+            <span>Nov 2023 – Jan 2024</span>
+            <span>Launching Mechanism (4CBLA10)</span>
             </span>
-            <span>
-            <span class="todo">[course title]</span>
-            </span>
-            </span>
-            <span class="proj-title">Magnetic field simulation</span>
-            <span class="proj-line">
-            <span class="todo">[One line in your words.]</span>
-            </span>
-            <span class="tags"><span>FEMM</span></span>
+            <span class="proj-title">A plane-launching mechanism</span>
+            <span class="proj-line">Launching a 50&nbsp;g plane as far as possible, using only a falling weight.</span>
+            <span class="tags"><span>Siemens NX</span><span>Simcenter</span><span>MATLAB</span><span>3D Printing</span></span>
           </span>
           <span class="proj-toggle" aria-hidden="true">
           <span class="when-closed">Show</span>
@@ -132,45 +257,156 @@
           </i>
           </span>
         </button>
-        <div class="proj-body full" id="magnetic-body">
+        <div class="proj-body full" id="launcher-body">
           <div class="w-text">
-          <p class="todo">[A paragraph or two in your words: the project, your
-          part in it, and how it turned out.]</p>
+            <h3>As far as possible, on a falling weight</h3>
+            <p>The brief: launch a 50&nbsp;g foam plane as far as possible, powered only by a falling counterweight
+            and a drum. Every printed part had to come out of 10% of a 300&nbsp;×&nbsp;100&nbsp;×&nbsp;50&nbsp;mm box.
+            The group went with a slider on a double drum, which multiplies the pull of the counterweight.</p>
+          </div>
+          <div class="w-split">
+            <div>
+              <h3>My contribution</h3>
+              <ul class="w-list">
+                <li>Designed my own version of the mechanism in NX: a single support on a hollow base connection, built to use as little print volume as possible. The group went with a two-support design instead, but I still like mine.</li>
+                <li>Ran a Simcenter motion simulation of the final mechanism to estimate the launch speed across launch angles.</li>
+                <li>Wrote the trajectory model in MATLAB, adding lift and drag to plain projectile motion using coefficients we measured. Getting it to behave took several rebuilds.</li>
+                <li>For the CAD part of the course, got our pendulum clock simulation working. The escape wheel turned out to be spinning the wrong way.</li>
+              </ul>
+            </div>
+            <div class="w-side">
+          <div class="w-show">
+          <div class="viewer">
+            <figure class="slide on" data-i="0">
+            <img src="assets/images/coursework/launcher/my-design.webp"
+            alt="My single-support launching mechanism in NX" loading="lazy">
+            <figcaption>My single-support design in NX.</figcaption>
+            </figure>
+            <figure class="slide" data-i="1">
+            <img src="assets/images/coursework/launcher/my-base.webp"
+            alt="The base connection I designed, on the mounting plate" loading="lazy">
+            <figcaption>The base connection: hollow to save print volume.</figcaption>
+            </figure>
+            <figure class="slide" data-i="2">
+            <img src="assets/images/coursework/launcher/my-sim.webp"
+            alt="Simcenter motion simulation of the mechanism pulling the slider" loading="lazy">
+            <figcaption>My Simcenter motion simulation of the final mechanism.</figcaption>
+            </figure>
+            <figure class="slide" data-i="3">
+            <figure class="plot cw-chart" id="chart-launch-velocity-sm">
+          <div class="plot-panel">
+            <span class="visual-label">Simulated launch speed (Simcenter)</span>
+            <div class="plot-legend" aria-hidden="true"><span><i class="sq" style="background:var(--s1)"></i>Simulated</span><span><i class="dashed"></i>Linear trend</span></div>
+            <div class="plot-scroll">
+            <svg viewBox="0 0 480 380" role="img" aria-labelledby="launch-velocity-sm-t launch-velocity-sm-d">
+              <title id="launch-velocity-sm-t">Simulated launch speed against launch angle</title>
+              <desc id="launch-velocity-sm-d">Launch speed falls roughly linearly from 6.93 m/s at 8.6 degrees to 3.92 m/s at 42 degrees.</desc>
+              <line x1="64" y1="328.0" x2="456" y2="328.0" class="cg"/><text x="54" y="332.0" class="ct" text-anchor="end">3</text><line x1="64" y1="258.7" x2="456" y2="258.7" class="cg"/><text x="54" y="262.7" class="ct" text-anchor="end">4</text><line x1="64" y1="189.3" x2="456" y2="189.3" class="cg"/><text x="54" y="193.3" class="ct" text-anchor="end">5</text><line x1="64" y1="120.0" x2="456" y2="120.0" class="cg"/><text x="54" y="124.0" class="ct" text-anchor="end">6</text><line x1="64" y1="50.7" x2="456" y2="50.7" class="cg"/><text x="54" y="54.7" class="ct" text-anchor="end">7</text><line x1="64.0" y1="16" x2="64.0" y2="328" class="cg"/><text x="64.0" y="348" class="ct" text-anchor="middle">5</text><line x1="162.0" y1="16" x2="162.0" y2="328" class="cg"/><text x="162.0" y="348" class="ct" text-anchor="middle">15</text><line x1="260.0" y1="16" x2="260.0" y2="328" class="cg"/><text x="260.0" y="348" class="ct" text-anchor="middle">25</text><line x1="358.0" y1="16" x2="358.0" y2="328" class="cg"/><text x="358.0" y="348" class="ct" text-anchor="middle">35</text><line x1="456.0" y1="16" x2="456.0" y2="328" class="cg"/><text x="456.0" y="348" class="ct" text-anchor="middle">45</text><line x1="64" y1="328" x2="456" y2="328" class="cx"/><text x="260.0" y="370" class="ct" text-anchor="middle">Launch angle (°)</text><text x="16" y="172.0" class="ct" text-anchor="middle" transform="rotate(-90 16 172.0)">Launch speed (m/s)</text><path d="M73.8,40.9 L446.2,264.3" class="cl trend"/><text x="446.2" y="36.8" class="ct" text-anchor="end">Trend: −0.085 m/s per degree</text><circle cx="99.5" cy="55.5" r="5.5" class="mk dot" style="fill:var(--s1)" data-tip="8.62°: 6.93 m/s"/><circle cx="149.1" cy="82.6" r="5.5" class="mk dot" style="fill:var(--s1)" data-tip="13.68°: 6.54 m/s"/><circle cx="199.7" cy="130.4" r="5.5" class="mk dot" style="fill:var(--s1)" data-tip="18.85°: 5.85 m/s"/><circle cx="252.0" cy="145.7" r="5.5" class="mk dot" style="fill:var(--s1)" data-tip="24.18°: 5.63 m/s"/><circle cx="306.6" cy="174.1" r="5.5" class="mk dot" style="fill:var(--s1)" data-tip="29.75°: 5.22 m/s"/><circle cx="364.4" cy="202.5" r="5.5" class="mk dot" style="fill:var(--s1)" data-tip="35.65°: 4.81 m/s"/><circle cx="426.7" cy="264.2" r="5.5" class="mk dot" style="fill:var(--s1)" data-tip="42.01°: 3.92 m/s"/><text x="161.1" y="74.6" class="cd">13.7°, 6.54 m/s</text>
+            </svg>
+            </div>
+            <div class="plot-tip" hidden></div>
+          </div>
+          <details class="plot-table">
+            <summary>Show the numbers</summary>
+            <div class="table-wrap"><table class="compare"><thead><tr><th>Launch angle (°)</th><th>Launch speed (m/s)</th></tr></thead><tbody><tr><td>8.62</td><td>6.93</td></tr><tr><td>13.68</td><td>6.54</td></tr><tr><td>18.85</td><td>5.85</td></tr><tr><td>24.18</td><td>5.63</td></tr><tr><td>29.75</td><td>5.22</td></tr><tr><td>35.65</td><td>4.81</td></tr><tr><td>42.01</td><td>3.92</td></tr></tbody></table></div>
+          </details>
+          </figure>
+            <figcaption>What the simulation gave: launch speed against angle.</figcaption>
+            </figure>
+            <figure class="slide" data-i="4">
+            <figure class="plot cw-chart" id="chart-launch-trajectory-sm">
+          <div class="plot-panel">
+            <span class="visual-label">Predicted flight with lift and drag</span>
+            
+            <div class="plot-scroll">
+            <svg viewBox="0 0 480 380" role="img" aria-labelledby="launch-trajectory-sm-t launch-trajectory-sm-d" data-hover='{"x":[0.0,0.041,0.081,0.122,0.165,0.208,0.252,0.295,0.341,0.387,0.433,0.481,0.53,0.579,0.631,0.683,0.736,0.79,0.846,0.904,0.961,1.018,1.073,1.127,1.179,1.23,1.28,1.329,1.377,1.424,1.47,1.516,1.56,1.603,1.646,1.689,1.731,1.771,1.812,1.852,1.892,1.932,1.969,2.006,2.043,2.08,2.117,2.154,2.19,2.224,2.258,2.293,2.327,2.361,2.395,2.429,2.463,2.495,2.526,2.557,2.588,2.62,2.651,2.682,2.713,2.744,2.776,2.807,2.835,2.863,2.892,2.92,2.948,2.977,3.005,3.033,3.062,3.09,3.118,3.146,3.175,3.203,3.23,3.256,3.281,3.307,3.332,3.357,3.383,3.408,3.433,3.459,3.484,3.509,3.535,3.56,3.585,3.611,3.636,3.661,3.686,3.712,3.737,3.76,3.783,3.805,3.828,3.85,3.873,3.895,3.917,3.94,3.962,3.984,4.007,4.029,4.052,4.074,4.096,4.119,4.141,4.163,4.181],"y":[1.5,1.511,1.521,1.53,1.54,1.55,1.558,1.566,1.574,1.582,1.589,1.595,1.601,1.606,1.611,1.615,1.618,1.621,1.622,1.623,1.623,1.621,1.619,1.616,1.613,1.608,1.603,1.598,1.591,1.585,1.577,1.569,1.561,1.553,1.543,1.534,1.524,1.514,1.503,1.492,1.481,1.469,1.457,1.445,1.433,1.42,1.407,1.394,1.38,1.367,1.353,1.339,1.325,1.31,1.295,1.28,1.264,1.249,1.234,1.219,1.203,1.187,1.171,1.154,1.138,1.121,1.103,1.085,1.069,1.052,1.036,1.019,1.001,0.984,0.966,0.948,0.929,0.911,0.892,0.873,0.854,0.834,0.815,0.797,0.779,0.76,0.742,0.723,0.704,0.685,0.665,0.646,0.626,0.606,0.586,0.565,0.545,0.524,0.503,0.482,0.46,0.439,0.417,0.396,0.377,0.357,0.337,0.317,0.296,0.276,0.255,0.234,0.213,0.192,0.171,0.15,0.128,0.106,0.085,0.062,0.04,0.018,-0.0],"xl":"Distance","yl":"Height","xu":"m","yu":"m","l":64,"pw":392,"t":16,"ph":312,"x0":0,"x1":4.5,"y0":0,"y1":2,"c":"var(--s1)"}'>
+              <title id="launch-trajectory-sm-t">Predicted flight path of the plane</title>
+              <desc id="launch-trajectory-sm-d">From 1.5 m at 6 m/s and 15 degrees, the plane climbs to about 1.62 m and lands 4.18 m away.</desc>
+              <line x1="64" y1="328.0" x2="456" y2="328.0" class="cg"/><text x="54" y="332.0" class="ct" text-anchor="end">0.0</text><line x1="64" y1="250.0" x2="456" y2="250.0" class="cg"/><text x="54" y="254.0" class="ct" text-anchor="end">0.5</text><line x1="64" y1="172.0" x2="456" y2="172.0" class="cg"/><text x="54" y="176.0" class="ct" text-anchor="end">1.0</text><line x1="64" y1="94.0" x2="456" y2="94.0" class="cg"/><text x="54" y="98.0" class="ct" text-anchor="end">1.5</text><line x1="64" y1="16.0" x2="456" y2="16.0" class="cg"/><text x="54" y="20.0" class="ct" text-anchor="end">2.0</text><line x1="64.0" y1="16" x2="64.0" y2="328" class="cg"/><text x="64.0" y="348" class="ct" text-anchor="middle">0</text><line x1="151.1" y1="16" x2="151.1" y2="328" class="cg"/><text x="151.1" y="348" class="ct" text-anchor="middle">1</text><line x1="238.2" y1="16" x2="238.2" y2="328" class="cg"/><text x="238.2" y="348" class="ct" text-anchor="middle">2</text><line x1="325.3" y1="16" x2="325.3" y2="328" class="cg"/><text x="325.3" y="348" class="ct" text-anchor="middle">3</text><line x1="412.4" y1="16" x2="412.4" y2="328" class="cg"/><text x="412.4" y="348" class="ct" text-anchor="middle">4</text><line x1="64" y1="328" x2="456" y2="328" class="cx"/><text x="260.0" y="370" class="ct" text-anchor="middle">Horizontal distance (m)</text><text x="16" y="172.0" class="ct" text-anchor="middle" transform="rotate(-90 16 172.0)">Height (m)</text><path d="M64.0,94.0 L64.7,93.7 L65.4,93.3 L66.1,93.0 L66.8,92.7 L67.5,92.3 L68.2,92.0 L68.9,91.7 L69.7,91.4 L70.4,91.1 L71.1,90.8 L71.8,90.4 L72.5,90.1 L73.2,89.8 L73.9,89.5 L74.6,89.2 L75.4,88.9 L76.1,88.6 L76.9,88.3 L77.6,88.0 L78.4,87.7 L79.1,87.4 L79.9,87.1 L80.6,86.8 L81.4,86.5 L82.2,86.3 L82.9,86.0 L83.7,85.7 L84.4,85.4 L85.2,85.2 L85.9,84.9 L86.7,84.6 L87.5,84.4 L88.2,84.1 L89.0,83.9 L89.7,83.6 L90.5,83.4 L91.3,83.1 L92.1,82.9 L92.9,82.6 L93.7,82.4 L94.5,82.1 L95.3,81.9 L96.1,81.7 L96.9,81.4 L97.7,81.2 L98.5,81.0 L99.3,80.8 L100.1,80.6 L100.9,80.3 L101.8,80.1 L102.6,79.9 L103.4,79.7 L104.2,79.5 L105.1,79.3 L105.9,79.1 L106.8,78.9 L107.6,78.8 L108.5,78.6 L109.3,78.4 L110.2,78.2 L111.1,78.0 L111.9,77.9 L112.8,77.7 L113.6,77.6 L114.5,77.4 L115.3,77.2 L116.2,77.1 L117.1,76.9 L118.0,76.8 L118.9,76.7 L119.9,76.5 L120.8,76.4 L121.7,76.3 L122.6,76.2 L123.5,76.0 L124.4,75.9 L125.3,75.8 L126.2,75.7 L127.1,75.6 L128.1,75.5 L129.0,75.5 L130.0,75.4 L131.0,75.3 L131.9,75.2 L132.9,75.2 L133.8,75.1 L134.8,75.0 L135.7,75.0 L136.7,75.0 L137.7,74.9 L138.7,74.9 L139.7,74.9 L140.7,74.8 L141.7,74.8 L142.7,74.8 L143.7,74.8 L144.7,74.8 L145.7,74.8 L146.8,74.8 L147.8,74.9 L148.8,74.9 L149.8,74.9 L150.8,75.0 L151.8,75.0 L152.7,75.1 L153.7,75.1 L154.6,75.2 L155.6,75.2 L156.5,75.3 L157.5,75.4 L158.4,75.5 L159.4,75.6 L160.3,75.7 L161.3,75.8 L162.2,75.9 L163.1,76.0 L164.0,76.1 L164.9,76.2 L165.8,76.3 L166.7,76.4 L167.6,76.5 L168.5,76.7 L169.4,76.8 L170.3,77.0 L171.2,77.1 L172.1,77.3 L172.9,77.4 L173.8,77.6 L174.6,77.7 L175.5,77.9 L176.3,78.1 L177.2,78.2 L178.0,78.4 L178.9,78.6 L179.7,78.8 L180.6,79.0 L181.4,79.2 L182.3,79.4 L183.1,79.6 L184.0,79.8 L184.8,80.0 L185.6,80.2 L186.4,80.4 L187.2,80.6 L188.0,80.8 L188.8,81.0 L189.6,81.3 L190.4,81.5 L191.2,81.7 L192.0,81.9 L192.8,82.2 L193.6,82.4 L194.4,82.7 L195.2,82.9 L196.0,83.2 L196.8,83.4 L197.6,83.7 L198.4,84.0 L199.2,84.2 L199.9,84.5 L200.7,84.7 L201.4,85.0 L202.2,85.3 L202.9,85.5 L203.7,85.8 L204.4,86.1 L205.2,86.4 L205.9,86.7 L206.7,86.9 L207.4,87.2 L208.1,87.5 L208.9,87.8 L209.6,88.1 L210.4,88.4 L211.1,88.7 L211.9,89.0 L212.6,89.4 L213.4,89.7 L214.1,90.0 L214.8,90.3 L215.5,90.6 L216.2,90.9 L216.9,91.2 L217.6,91.5 L218.3,91.9 L219.0,92.2 L219.7,92.5 L220.4,92.8 L221.1,93.2 L221.8,93.5 L222.5,93.8 L223.2,94.2 L223.9,94.5 L224.6,94.9 L225.3,95.2 L226.0,95.6 L226.7,95.9 L227.4,96.3 L228.1,96.6 L228.8,97.0 L229.5,97.4 L230.2,97.7 L230.9,98.1 L231.6,98.5 L232.3,98.9 L232.9,99.2 L233.6,99.6 L234.2,99.9 L234.8,100.3 L235.5,100.7 L236.1,101.0 L236.8,101.4 L237.4,101.8 L238.1,102.1 L238.7,102.5 L239.4,102.9 L240.0,103.3 L240.7,103.7 L241.3,104.1 L242.0,104.4 L242.6,104.8 L243.2,105.2 L243.9,105.6 L244.5,106.0 L245.2,106.4 L245.8,106.8 L246.5,107.2 L247.1,107.7 L247.8,108.1 L248.4,108.5 L249.1,108.9 L249.7,109.3 L250.4,109.7 L251.0,110.2 L251.6,110.6 L252.3,111.0 L252.9,111.5 L253.6,111.9 L254.2,112.3 L254.8,112.7 L255.4,113.1 L256.0,113.5 L256.6,114.0 L257.2,114.4 L257.8,114.8 L258.3,115.2 L258.9,115.6 L259.5,116.1 L260.1,116.5 L260.7,116.9 L261.3,117.3 L261.9,117.8 L262.5,118.2 L263.1,118.7 L263.7,119.1 L264.3,119.5 L264.9,120.0 L265.5,120.4 L266.1,120.9 L266.7,121.3 L267.3,121.8 L267.9,122.2 L268.5,122.7 L269.1,123.2 L269.7,123.6 L270.3,124.1 L270.9,124.6 L271.4,125.0 L272.0,125.5 L272.6,126.0 L273.2,126.4 L273.8,126.9 L274.4,127.4 L275.0,127.9 L275.6,128.4 L276.2,128.9 L276.8,129.3 L277.4,129.8 L278.0,130.3 L278.6,130.8 L279.1,131.3 L279.7,131.7 L280.2,132.2 L280.8,132.7 L281.3,133.1 L281.8,133.6 L282.4,134.1 L282.9,134.5 L283.5,135.0 L284.0,135.5 L284.6,136.0 L285.1,136.4 L285.7,136.9 L286.2,137.4 L286.8,137.9 L287.3,138.4 L287.8,138.8 L288.4,139.3 L288.9,139.8 L289.5,140.3 L290.0,140.8 L290.6,141.3 L291.1,141.8 L291.6,142.3 L292.2,142.8 L292.7,143.3 L293.3,143.8 L293.8,144.3 L294.4,144.8 L294.9,145.3 L295.5,145.8 L296.0,146.3 L296.5,146.9 L297.1,147.4 L297.6,147.9 L298.2,148.4 L298.7,148.9 L299.3,149.5 L299.8,150.0 L300.4,150.5 L300.9,151.1 L301.4,151.6 L302.0,152.1 L302.5,152.7 L303.1,153.2 L303.6,153.7 L304.2,154.3 L304.7,154.8 L305.2,155.4 L305.8,155.9 L306.3,156.5 L306.9,157.0 L307.4,157.6 L308.0,158.1 L308.5,158.7 L309.0,159.2 L309.5,159.7 L310.0,160.2 L310.5,160.7 L311.0,161.2 L311.5,161.7 L312.0,162.3 L312.5,162.8 L312.9,163.3 L313.4,163.8 L313.9,164.3 L314.4,164.9 L314.9,165.4 L315.4,165.9 L315.9,166.4 L316.4,167.0 L316.9,167.5 L317.4,168.0 L317.9,168.6 L318.4,169.1 L318.9,169.6 L319.4,170.2 L319.9,170.7 L320.3,171.3 L320.8,171.8 L321.3,172.4 L321.8,172.9 L322.3,173.5 L322.8,174.0 L323.3,174.6 L323.8,175.1 L324.3,175.7 L324.8,176.2 L325.3,176.8 L325.8,177.3 L326.3,177.9 L326.8,178.5 L327.2,179.0 L327.7,179.6 L328.2,180.2 L328.7,180.7 L329.2,181.3 L329.7,181.9 L330.2,182.4 L330.7,183.0 L331.2,183.6 L331.7,184.2 L332.2,184.7 L332.7,185.3 L333.2,185.9 L333.7,186.5 L334.1,187.1 L334.6,187.7 L335.1,188.3 L335.6,188.8 L336.1,189.4 L336.6,190.0 L337.1,190.6 L337.6,191.2 L338.1,191.8 L338.6,192.4 L339.1,193.0 L339.6,193.6 L340.0,194.2 L340.5,194.8 L341.0,195.4 L341.5,196.0 L342.0,196.6 L342.5,197.3 L343.0,197.9 L343.5,198.5 L344.0,199.1 L344.5,199.7 L345.0,200.3 L345.4,200.9 L345.9,201.5 L346.3,202.0 L346.7,202.6 L347.2,203.1 L347.6,203.7 L348.1,204.3 L348.5,204.8 L348.9,205.4 L349.4,206.0 L349.8,206.5 L350.3,207.1 L350.7,207.7 L351.2,208.3 L351.6,208.8 L352.0,209.4 L352.5,210.0 L352.9,210.6 L353.4,211.2 L353.8,211.7 L354.3,212.3 L354.7,212.9 L355.1,213.5 L355.6,214.1 L356.0,214.7 L356.5,215.3 L356.9,215.8 L357.3,216.4 L357.8,217.0 L358.2,217.6 L358.7,218.2 L359.1,218.8 L359.6,219.4 L360.0,220.0 L360.4,220.6 L360.9,221.2 L361.3,221.8 L361.8,222.4 L362.2,223.0 L362.6,223.6 L363.1,224.2 L363.5,224.9 L364.0,225.5 L364.4,226.1 L364.9,226.7 L365.3,227.3 L365.7,227.9 L366.2,228.5 L366.6,229.1 L367.1,229.8 L367.5,230.4 L367.9,231.0 L368.4,231.6 L368.8,232.3 L369.3,232.9 L369.7,233.5 L370.1,234.1 L370.6,234.8 L371.0,235.4 L371.5,236.0 L371.9,236.7 L372.4,237.3 L372.8,237.9 L373.2,238.6 L373.7,239.2 L374.1,239.8 L374.6,240.5 L375.0,241.1 L375.4,241.8 L375.9,242.4 L376.3,243.1 L376.8,243.7 L377.2,244.3 L377.6,245.0 L378.1,245.6 L378.5,246.3 L379.0,246.9 L379.4,247.6 L379.8,248.3 L380.3,248.9 L380.7,249.6 L381.2,250.2 L381.6,250.9 L382.0,251.5 L382.5,252.2 L382.9,252.9 L383.4,253.5 L383.8,254.2 L384.2,254.9 L384.7,255.5 L385.1,256.2 L385.6,256.9 L386.0,257.6 L386.4,258.2 L386.9,258.9 L387.3,259.6 L387.8,260.3 L388.2,260.9 L388.6,261.6 L389.1,262.3 L389.5,263.0 L390.0,263.7 L390.4,264.3 L390.8,264.9 L391.2,265.6 L391.6,266.2 L392.0,266.8 L392.4,267.4 L392.8,268.0 L393.1,268.6 L393.5,269.2 L393.9,269.9 L394.3,270.5 L394.7,271.1 L395.1,271.7 L395.5,272.3 L395.9,273.0 L396.3,273.6 L396.7,274.2 L397.0,274.8 L397.4,275.5 L397.8,276.1 L398.2,276.7 L398.6,277.3 L399.0,278.0 L399.4,278.6 L399.8,279.2 L400.2,279.9 L400.6,280.5 L401.0,281.1 L401.3,281.8 L401.7,282.4 L402.1,283.0 L402.5,283.7 L402.9,284.3 L403.3,285.0 L403.7,285.6 L404.1,286.3 L404.5,286.9 L404.9,287.5 L405.2,288.2 L405.6,288.8 L406.0,289.5 L406.4,290.1 L406.8,290.8 L407.2,291.4 L407.6,292.1 L408.0,292.7 L408.4,293.4 L408.8,294.0 L409.1,294.7 L409.5,295.4 L409.9,296.0 L410.3,296.7 L410.7,297.3 L411.1,298.0 L411.5,298.7 L411.9,299.3 L412.3,300.0 L412.7,300.6 L413.0,301.3 L413.4,302.0 L413.8,302.6 L414.2,303.3 L414.6,304.0 L415.0,304.6 L415.4,305.3 L415.8,306.0 L416.2,306.7 L416.5,307.3 L416.9,308.0 L417.3,308.7 L417.7,309.4 L418.1,310.0 L418.5,310.7 L418.9,311.4 L419.3,312.1 L419.7,312.8 L420.0,313.4 L420.4,314.1 L420.8,314.8 L421.2,315.5 L421.6,316.2 L422.0,316.9 L422.4,317.6 L422.8,318.3 L423.2,318.9 L423.5,319.6 L423.9,320.3 L424.3,321.0 L424.7,321.7 L425.1,322.4 L425.5,323.1 L425.9,323.8 L426.3,324.5 L426.7,325.2 L427.0,325.9 L427.4,326.6 L427.8,327.3 L428.2,328.0 L428.2,328.0" class="cl" style="stroke:var(--s1)"/><circle cx="428.2" cy="328.0" r="5" class="mk" style="fill:var(--s1)"/><text x="406.2" y="318.0" class="cd" text-anchor="end">Lands at 4.18 m</text><text x="74.0" y="128.0" class="ct">Launched from 1.5 m at 6 m/s, 15°</text>
+            </svg>
+            </div>
+            <div class="plot-tip" hidden></div>
+          </div>
+          </figure>
+            <figcaption>My trajectory model: predicted flight for a 15° launch.</figcaption>
+            </figure>
+          </div>
+          <div class="slide-nav">
+            <span class="count"><span class="ci">1</span> / 5</span>
+            <button type="button" data-i="0" aria-current="true"
+            aria-label="Show 1 of 5">1</button>
+            <button type="button" data-i="1" aria-current="false"
+            aria-label="Show 2 of 5">2</button>
+            <button type="button" data-i="2" aria-current="false"
+            aria-label="Show 3 of 5">3</button>
+            <button type="button" data-i="3" aria-current="false"
+            aria-label="Show 4 of 5">4</button>
+            <button type="button" data-i="4" aria-current="false"
+            aria-label="Show 5 of 5">5</button>
+            <button type="button" class="prev" aria-label="Previous">←</button>
+            <button type="button" class="next" aria-label="Next">→</button>
+          </div>
+          </div>
+              <dl class="facts">
+                <dt>Team</dt><dd>Seven students</dd>
+                <dt>Tools</dt><dd>Siemens NX, Simcenter, MATLAB</dd>
+                <dt>Made by</dt><dd>3D printing (SLS)</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="findings findings-three">
+            <div class="finding">
+            <span class="finding-value">≈ 6 <small>m/s</small></span>
+            <p>Launch speed off the slider, close to what we predicted.</p>
+            </div>
+            <div class="finding">
+            <span class="finding-value">4.2 <small>m</small></span>
+            <p>Flight distance my model predicted for a 15° launch.</p>
+            </div>
+            <div class="finding">
+            <span class="finding-value">12%</span>
+            <p>Gap between the predicted and the measured distance.</p>
+            </div>
+          </div>
+          <div class="w-text">
+            <h3>How it turned out</h3>
+            <p>The plane left the slider at about 6&nbsp;m/s, and the distance my model predicted was within 12% of
+            what we measured. For a model built on lift and drag coefficients we measured ourselves, I was happy with that.</p>
           </div>
           <div class="w-gallery">
             <figure class="w-fig">
-            <div class="ph">[project outcome]</div>
-            <figcaption>[caption]</figcaption>
+            <img src="assets/images/coursework/launcher/build.webp"
+            alt="The printed mechanism with its drum and slider" loading="lazy" />
+            <figcaption>The group's final mechanism, printed.</figcaption>
             </figure>
             <figure class="w-fig">
-            <div class="ph">[model or prototype]</div>
-            <figcaption>[caption]</figcaption>
+            <img src="assets/images/coursework/launcher/plane.webp"
+            alt="The plane sitting on the slider" loading="lazy" />
+            <figcaption>The plane on the slider, ready to launch.</figcaption>
             </figure>
             <figure class="w-fig">
-            <div class="ph">[photo with the team]</div>
-            <figcaption>[caption]</figcaption>
+            <img src="assets/images/coursework/launcher/cad.webp"
+            alt="CAD model of the group's final drum and frame" loading="lazy" />
+            <figcaption>The group's final design in NX.</figcaption>
             </figure>
           </div>
         </div>
       </article>
-      <article class="proj" id="bike">
+      <article class="proj" id="bike-indicator">
         <button class="proj-head" type="button" aria-expanded="false"
-        aria-controls="bike-body">
-          <span class="proj-thumb"><div class="ph">[photo]</div></span>
+        aria-controls="bike-indicator-body">
+          <span class="proj-thumb">
+          <img src="assets/images/coursework/bike/handlebar.webp"
+          alt="Indicator buttons and front lights mounted on the handlebar" loading="lazy" />
+          </span>
           <span class="proj-text">
             <span class="proj-when">
-            <span>
-            <span class="todo">[dates]</span>
+            <span>Sep – Oct 2023</span>
+            <span>Engineering Design (4WBB0)</span>
             </span>
-            <span>
-            <span class="todo">[course title]</span>
-            </span>
-            </span>
-            <span class="proj-title">Bike signal design project</span>
-            <span class="proj-line">
-            <span class="todo">[One line in your words.]</span>
-            </span>
-            <span class="tags"><span>Arduino</span></span>
+            <span class="proj-title">Bike indicator and brake light</span>
+            <span class="proj-line">A clip-on kit that gives any bike indicators, a brake light and crash detection.</span>
+            <span class="tags"><span>Arduino</span><span>C++</span><span>Electronics</span></span>
           </span>
           <span class="proj-toggle" aria-hidden="true">
           <span class="when-closed">Show</span>
@@ -179,23 +415,65 @@
           </i>
           </span>
         </button>
-        <div class="proj-body full" id="bike-body">
+        <div class="proj-body full" id="bike-indicator-body">
           <div class="w-text">
-          <p class="todo">[A paragraph or two in your words: the project, your
-          part in it, and how it turned out.]</p>
+            <h3>Indicators for bikes</h3>
+            <p>Cars have indicators and brake lights. Bikes, mostly, don't. Our group of six designed a kit that clips
+            onto any bike: LED strips front and back for indicators and daytime lights, buttons on the handlebar,
+            an accelerometer that lights up when you brake, and a buzzer that goes off if you crash.</p>
+          </div>
+          <div class="w-split">
+            <div>
+              <h3>My contribution</h3>
+              <p>The electronics and code were mine.</p>
+              <ul class="w-list">
+                <li>Chose the components and kept them within budget.</li>
+                <li>Wrote the Arduino logic for the indicators, the brake light and crash detection.</li>
+                <li>Drew up the circuit schematics so everything would fit in the enclosures.</li>
+                <li>Did the soldering and wiring.</li>
+                <li>Debugged what worked in simulation but not on the bike. The LED strips took one data pin instead of three, and the latching buttons were a puzzle to wire.</li>
+                <li>Early on, modelled the first electronics enclosures in CAD.</li>
+              </ul>
+            </div>
+            <div class="w-side"><figure class="w-fig">
+            <figure class="plot cw-chart cw-diagram" id="dg-bike-circuit">
+          <div class="plot-panel">
+            <span class="visual-label">Inputs and outputs</span>
+            <svg viewBox="0 0 500 440" role="img" aria-labelledby="bike-circuit-t bike-circuit-d">
+              <title id="bike-circuit-t">Wiring of the bike indicator system</title>
+              <desc id="bike-circuit-d">An Arduino Uno reads the left and right indicator buttons, an alarm-off switch and an MPU6050 accelerometer, and drives the left and right turn signals, an RGB brake light and a crash buzzer.</desc>
+              <defs><marker id="bk-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="dg-head"/></marker><marker id="bk-e" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="dg-ehead"/></marker></defs><rect x="180" y="56" width="140" height="344" rx="10" class="dg-board"/><text x="250.0" y="224.0" class="dg-t dg-big" text-anchor="middle">Arduino</text><text x="250.0" y="244.0" class="dg-t dg-big" text-anchor="middle">Uno</text><rect x="10" y="76" width="136" height="48" rx="8" class="dg-box"/><text x="78" y="97" class="dg-t" text-anchor="middle">Left indicator</text><text x="78" y="114" class="dg-small" text-anchor="middle">push button</text><path d="M146,100 H163.0 V100 H180" class="dg-wire"/><circle cx="180" cy="100" r="3.5" class="dg-pin"/><text x="189" y="104" class="dg-pinlab" text-anchor="start">D3</text><rect x="10" y="146" width="136" height="48" rx="8" class="dg-box"/><text x="78" y="167" class="dg-t" text-anchor="middle">Right indicator</text><text x="78" y="184" class="dg-small" text-anchor="middle">push button</text><path d="M146,170 H163.0 V170 H180" class="dg-wire"/><circle cx="180" cy="170" r="3.5" class="dg-pin"/><text x="189" y="174" class="dg-pinlab" text-anchor="start">D2</text><rect x="10" y="216" width="136" height="48" rx="8" class="dg-box"/><text x="78" y="237" class="dg-t" text-anchor="middle">Alarm off</text><text x="78" y="254" class="dg-small" text-anchor="middle">switch</text><path d="M146,240 H163.0 V240 H180" class="dg-wire"/><circle cx="180" cy="240" r="3.5" class="dg-pin"/><text x="189" y="244" class="dg-pinlab" text-anchor="start">D10</text><rect x="10" y="316" width="136" height="48" rx="8" class="dg-box"/><text x="78" y="337" class="dg-t" text-anchor="middle">MPU6050</text><text x="78" y="354" class="dg-small" text-anchor="middle">accelerometer</text><path d="M146,330 H163.0 V330 H180" class="dg-wire"/><path d="M146,350 H163.0 V362 H180" class="dg-wire"/><circle cx="180" cy="330" r="3.5" class="dg-pin"/><text x="189" y="334" class="dg-pinlab" text-anchor="start">A4</text><circle cx="180" cy="362" r="3.5" class="dg-pin"/><text x="189" y="366" class="dg-pinlab" text-anchor="start">A5</text><rect x="354" y="76" width="136" height="48" rx="8" class="dg-box"/><text x="422" y="97" class="dg-t" text-anchor="middle">Left signal</text><text x="422" y="114" class="dg-small" text-anchor="middle">turn LEDs</text><path d="M320,100 H337.0 V100 H354" class="dg-wire"/><circle cx="320" cy="100" r="3.5" class="dg-pin"/><text x="311" y="104" class="dg-pinlab" text-anchor="end">D5</text><rect x="354" y="146" width="136" height="48" rx="8" class="dg-box"/><text x="422" y="167" class="dg-t" text-anchor="middle">Right signal</text><text x="422" y="184" class="dg-small" text-anchor="middle">turn LEDs</text><path d="M320,170 H337.0 V170 H354" class="dg-wire"/><circle cx="320" cy="170" r="3.5" class="dg-pin"/><text x="311" y="174" class="dg-pinlab" text-anchor="end">D4</text><rect x="354" y="226" width="136" height="48" rx="8" class="dg-box"/><text x="422" y="247" class="dg-t" text-anchor="middle">Brake light</text><text x="422" y="264" class="dg-small" text-anchor="middle">RGB LED</text><path d="M320,250 H337.0 V250 H354" class="dg-wire"/><circle cx="320" cy="250" r="3.5" class="dg-pin"/><text x="311" y="254" class="dg-pinlab" text-anchor="end">D6–8</text><rect x="354" y="316" width="136" height="48" rx="8" class="dg-box"/><text x="422" y="337" class="dg-t" text-anchor="middle">Crash alarm</text><text x="422" y="354" class="dg-small" text-anchor="middle">buzzer</text><path d="M320,340 H337.0 V340 H354" class="dg-wire"/><circle cx="320" cy="340" r="3.5" class="dg-pin"/><text x="311" y="344" class="dg-pinlab" text-anchor="end">D9</text><text x="78" y="36" class="dg-cap" text-anchor="middle">INPUTS</text><text x="422" y="36" class="dg-cap" text-anchor="middle">OUTPUTS</text><text x="250" y="425" class="dg-small" text-anchor="middle">I²C on A4/A5 · common ground</text>
+            </svg>
+          </div>
+          </figure>
+            <figcaption>The circuit, redrawn from my Wokwi simulation.</figcaption>
+            </figure>
+              <dl class="facts">
+                <dt>Team</dt><dd>Six students</dd>
+                <dt>Tools</dt><dd>Arduino (C++), soldering iron</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="w-text">
+            <h3>How it turned out</h3>
+            <p>Every feature worked on the finished bike, and the indicators were bright and obvious. It wasn't
+            waterproof, the wiring was rough, and in hindsight the brake light should have been red, not green.</p>
           </div>
           <div class="w-gallery">
             <figure class="w-fig">
-            <div class="ph">[project outcome]</div>
-            <figcaption>[caption]</figcaption>
+            <img src="assets/images/coursework/bike/rear.webp"
+            alt="Rear light mounted on the luggage carrier" loading="lazy" />
+            <figcaption>The rear light on the luggage carrier.</figcaption>
             </figure>
             <figure class="w-fig">
-            <div class="ph">[model or prototype]</div>
-            <figcaption>[caption]</figcaption>
+            <img src="assets/images/coursework/bike/lights.webp"
+            alt="Rear LED strip lit up, with the accelerometer housing" loading="lazy" />
+            <figcaption>Rear lights and the accelerometer housing.</figcaption>
             </figure>
             <figure class="w-fig">
-            <div class="ph">[photo with the team]</div>
-            <figcaption>[caption]</figcaption>
+            <img src="assets/images/coursework/bike/bench.webp"
+            alt="The circuit on the bench during testing" loading="lazy" />
+            <figcaption>Testing the circuit on the bench.</figcaption>
             </figure>
           </div>
         </div>
@@ -209,5 +487,42 @@
     </footer>
   </div>
   <script src="script.js"></script>
+  <script>
+    /* coursework charts: tooltips on bars and points, crosshair on line charts */
+    (function () {
+      document.querySelectorAll(".cw-chart").forEach(function (fig) {
+        var svg = fig.querySelector("svg"), tip = fig.querySelector(".plot-tip"), panel = fig.querySelector(".plot-panel");
+        function place(e) {
+          var r = panel.getBoundingClientRect(), x = e.clientX - r.left + 14, y = e.clientY - r.top + 14;
+          if (x + tip.offsetWidth > r.width) x = e.clientX - r.left - tip.offsetWidth - 14;
+          tip.style.left = Math.max(4, x) + "px"; tip.style.top = Math.max(4, y) + "px";
+        }
+        fig.querySelectorAll("[data-tip]").forEach(function (m) {
+          m.addEventListener("mousemove", function (e) { tip.textContent = m.getAttribute("data-tip"); tip.hidden = false; place(e); });
+          m.addEventListener("mouseleave", function () { tip.hidden = true; });
+        });
+        var h = svg.getAttribute("data-hover"); if (!h) return;
+        h = JSON.parse(h);
+        var ns = "http://www.w3.org/2000/svg";
+        var cx = document.createElementNS(ns, "line"); cx.setAttribute("class", "cx"); cx.setAttribute("y1", h.t); cx.setAttribute("y2", h.t + h.ph); cx.style.visibility = "hidden";
+        var dot = document.createElementNS(ns, "circle"); dot.setAttribute("r", 5); dot.setAttribute("class", "mk"); dot.style.fill = h.c; dot.style.visibility = "hidden";
+        var hit = document.createElementNS(ns, "rect"); hit.setAttribute("x", h.l); hit.setAttribute("y", h.t); hit.setAttribute("width", h.pw); hit.setAttribute("height", h.ph); hit.setAttribute("fill", "transparent"); hit.setAttribute("class", "chit");
+        svg.appendChild(cx); svg.appendChild(dot); svg.appendChild(hit);
+        function X(v) { return h.l + (v - h.x0) / (h.x1 - h.x0) * h.pw; }
+        function Y(v) { return h.t + h.ph - (v - h.y0) / (h.y1 - h.y0) * h.ph; }
+        hit.addEventListener("mousemove", function (e) {
+          var r = svg.getBoundingClientRect(), vb = svg.viewBox.baseVal, px = (e.clientX - r.left) * vb.width / r.width;
+          var best = 0, bd = 1e9;
+          for (var i = 0; i < h.x.length; i++) { var d = Math.abs(X(h.x[i]) - px); if (d < bd) { bd = d; best = i; } }
+          var x = X(h.x[best]), y = Y(h.y[best]);
+          cx.setAttribute("x1", x); cx.setAttribute("x2", x); dot.setAttribute("cx", x); dot.setAttribute("cy", y);
+          cx.style.visibility = dot.style.visibility = "visible";
+          tip.innerHTML = "<span>" + h.xl + " <b>" + h.x[best] + " " + h.xu + "</b></span><span>" + h.yl + " <b>" + h.y[best] + " " + h.yu + "</b></span>";
+          tip.hidden = false; place(e);
+        });
+        hit.addEventListener("mouseleave", function () { tip.hidden = true; cx.style.visibility = dot.style.visibility = "hidden"; });
+      });
+    })();
+  </script>
 </body>
 </html>
